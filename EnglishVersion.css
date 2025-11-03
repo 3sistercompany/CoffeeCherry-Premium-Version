@@ -2394,6 +2394,7 @@ section {
     font-size: 16px;
     line-height: 1.5;
     max-width: 100%;
+    margin-bottom: 0px;
   }
 
   .logoBannerFeatures img {
@@ -2740,6 +2741,7 @@ footer .footer-logo img{
   .titleaboutus p {
     font-size: 16px;
     max-width: 600px;
+    margin-bottom: 0px;
   }
  .slidingg .content .title p {
     font-size: 40px;
@@ -2920,6 +2922,7 @@ footer .footer-logo img{
   .titleaboutus p {
     font-size: 22px;
     max-width: 700px;
+    margin-bottom: 0px;
   }
 .highlightBannerText1 .leftSide1,
 .highlightBannerText1 .rightSide1 {
@@ -5656,3 +5659,4 @@ footer .footer-logo img{
   }
   
     }
+
