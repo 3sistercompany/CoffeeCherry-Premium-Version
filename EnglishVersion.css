@@ -514,7 +514,7 @@ background-color:  #3C8070
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 30px;
   text-transform: uppercase;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px 151821;
@@ -5659,4 +5659,5 @@ footer .footer-logo img{
   }
   
     }
+
 
