@@ -311,6 +311,12 @@ img {
 
 /* Responsive Footer */
 @media (max-width: 768px) {
+    html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
   .footer-container {
     flex-direction: column;
     text-align: center;
@@ -420,7 +426,17 @@ img {
 
   /* Tablet (768px and below) */
 @media(max-width: 1024px) {
-
+    html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+ .nav-center{
+  width: 100%;
+  align-items: center;
+  background-color: var(--card-bg);
+ }
   .country-header img{
     margin-left:20px;
   }
@@ -431,23 +447,14 @@ img {
     color: var(--muted);
   }
 
-  .nav-center {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    flex-direction: column;
-    gap: 25px;
-    background: #fff;
-    height: 100vh;
-    width: 250px;
-    padding-top: 80px;
-    box-shadow: -4px 0 20px rgba(0,0,0,0.1);
-    transition: 0.4s;
-    z-index: 998;
-  }
+ 
+ 
+ 
 
   .nav-center.active {
     right: 0;
+    width: 100%;
+    background-color: var(--bg);
   }
 
   /* Close icon inside menu */
@@ -1207,5 +1214,3 @@ window.addEventListener('resize', () => {
 <script src="main.js"></script>
 </body>
 </html>
-
-
