@@ -7,10 +7,7 @@
   --ui-accent: #4dabf7;
   --ui-muted: #ddd;
 }
-p {
-  
-  font-family: "Neue Haas";   font-weight: 400;
-}
+
 
 @font-face {
   font-family: "Neue Haas";
@@ -457,6 +454,8 @@ background-color:  #3C8070
 }
 /* Form container */
 /* Form container */
+
+
 .subscribe-form a {
   display: flex;
   flex-direction: column;
@@ -514,6 +513,7 @@ background-color:  #3C8070
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
+
   font-size: 30px;
   text-transform: uppercase;
   transition: all 0.3s ease;
@@ -1364,6 +1364,7 @@ banner .container .card.hidden:nth-child(1) { transition-delay: 0.2s; }
 }
 .titleaboutus {
   text-align: center;  /* center all text inside */
+ 
 }
 
 .titleaboutus h4 {
@@ -1373,14 +1374,15 @@ banner .container .card.hidden:nth-child(1) { transition-delay: 0.2s; }
   font-weight: 500;
 }
 
-.titleaboutus p {
+.container .titleaboutus p {
   font-size: 30px;
   line-height: 1.7;
   max-width: 900px;   /* limit width */
   margin: 0 auto;  
    font-family: "Atyp TEST", sans-serif;
   font-weight: 500;
-margin-bottom: 15px;}
+  margin-top: 50px;
+}
 
  .titleaboutus buttton a{
     padding: 12px 20px;
@@ -2394,7 +2396,7 @@ section {
     font-size: 16px;
     line-height: 1.5;
     max-width: 100%;
-    margin-bottom: 0px;
+  
   }
 
   .logoBannerFeatures img {
@@ -2662,6 +2664,7 @@ min-width: 250px;
   .titleaboutus p {
     font-size: 15px;
     max-width: 550px;
+  
   }
 footer .footer-logo img{
   width: 200px;
@@ -2741,7 +2744,7 @@ footer .footer-logo img{
   .titleaboutus p {
     font-size: 16px;
     max-width: 600px;
-    margin-bottom: 0px;
+  
   }
  .slidingg .content .title p {
     font-size: 40px;
@@ -2922,7 +2925,7 @@ footer .footer-logo img{
   .titleaboutus p {
     font-size: 22px;
     max-width: 700px;
-    margin-bottom: 0px;
+    
   }
 .highlightBannerText1 .leftSide1,
 .highlightBannerText1 .rightSide1 {
@@ -2968,6 +2971,7 @@ footer .footer-logo img{
   .titleaboutus p {
     font-size: 18px;
     max-width: 700px;
+    margin-bottom: 0px;
   }
   
   /* Navbar base styles (desktop) */
@@ -3207,6 +3211,7 @@ footer .footer-logo img{
   .titleaboutus p {
     font-size: 28px; /* bigger paragraph */
     max-width: 900px; /* wider for laptops */
+    margin-bottom: 0px;
   }
 }
       
@@ -3593,6 +3598,8 @@ margin-left: -10px;
 
   .BannerFile .overlay-content p {
     font-size: 12px;
+     font-family: "Atyp TEST", sans-serif;
+  font-weight: 500;
   }
 
   .BannerFileButton {
@@ -3750,6 +3757,7 @@ margin-left: -10px;
 
   .aboutusbackground .titleaboutus p {
     font-size: 22px;
+    margin-bottom: 0px;
   }
 
   .titleaboutus .buttons button {
@@ -3914,6 +3922,7 @@ margin-left: -10px;
     font-size: 13px;
     line-height: 1.45;
     padding: 0 12px;
+    margin-bottom: 0px;
   }
 
   /* Banner */
@@ -4207,6 +4216,7 @@ margin-left: -10px;
 
   .aboutusbackground .titleaboutus p {
     font-size: 20px;
+    margin-bottom: 0px;
   }
 
   .titleaboutus .buttons button {
@@ -4582,6 +4592,7 @@ margin-left: -10px;
   }
   .aboutusbackground .titleaboutus p{
     font-size: 20px;
+    margin-bottom: 0px;
   }
   .titleaboutus .buttons button {
     padding: 8px 12px;
@@ -4753,6 +4764,8 @@ margin-left: -10px;
     font-size: 12px;
     line-height: 1.4;
     padding: 0 10px;
+    
+    margin-bottom: 0px;
   }
 
   /* Banner */
@@ -5342,6 +5355,7 @@ margin-left: -10px;
     font-size: 12px;
     line-height: 1.4;
     padding: 0 10px; /* tighter padding */
+    margin-bottom: 0px;
   }
 /* Banner Base */
 .banner {
@@ -5659,5 +5673,3 @@ footer .footer-logo img{
   }
   
     }
-
-
