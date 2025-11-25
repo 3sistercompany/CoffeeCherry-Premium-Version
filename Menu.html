@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KoffeeCherry Crop List | Menu</title>
+<link rel="icon" href="Green icon/Logo Full White.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css">
+<link rel="stylesheet" href="style.css">
+
+<style>
+  
+  /* Top container animation */
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #fff; /* or your header color */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  
+  opacity: 0;
+  transform: translateY(-100px); /* start above the viewport */
+  transition: all 0.8s ease-out;
+}
+
+.fade-up, .fade-left, .fade-right {
+  opacity: 0;
+  transform: translateY(50px); /* default fade-up */
+  transition: all 1s ease-out;
+}
+.top-container.show {
+  opacity: 1;
+  transform: translateY(0); /* move to original position */
+}
+
+  @font-face {
+  font-family: "Atyp TEST Variable";
+  src: url("https://db.onlinewebfonts.com/t/f093e1b95226687573af124b98e34cb1.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/f093e1b95226687573af124b98e34cb1.woff") format("woff");
+  font-weight: 100 600; /* variable range */
+  font-style: normal;
+}
+
+:root {
+  --bg:#fcf9eb;
+  --accent:#8b5e3c;
+  --accent-light:#c8a27d;
+  --text:#b92b4f;
+  --muted:#3c8070;
+  --card-bg:#fcf9eb;
+  --shadow:rgba(0,0,0,0.08);
+  --filter-bg:rgba(255,255,255,0.95);
+}
+@font-face {
+  font-family: "Neue Haas";
+  src: url("fonts/NeueHaas-Regular.woff2") format("woff2"),
+       url("fonts/NeueHaas-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+h1,h2,h3,h4{
+   font-family: "Atyp TEST Variable";
+  font-weight: 400;
+  }
+
+/* --- Reset --- */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+
+/* --- Body --- */
+body{background:var(--card-bg); color:var(--text); overflow-x:hidden; }
+.container{max-width:1800px;margin:0 auto;padding:0 30px;}
+.nav-right .mobile-menu,
+.nav-center .close-menu {
+  display: none;
+  color: var(--muted);
+}
+/* --- Navbar --- */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0px 0;
+  position:sticky;
+  top:0;
+    background:#fcf9eb;
+  z-index:999;
+  box-shadow:0 3px 20px var(--shadow);
+  transition:0.3s;
+}
+
+.nav-center{
+  display:flex;
+  gap:50px;
+ 
+}
+.nav-center a{
+  text-decoration:none;
+  color:var(--muted);
+  font-weight:500;
+  font-size:16px;
+  position:relative;
+  padding:5px 0;
+  transition:0.3s;
+}
+.nav-center a::after{
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:50%;
+  width:0;
+  height:2px;
+  background:var(--muted);
+  transition:0.3s;
+  transform:translateX(-50%);
+}
+.nav-center a:hover::after{
+  width:100%;
+
+}
+.nav-center a:hover{color:var(--muted);}
+.nav-right .mobile-menu{display:none;font-size:28px;cursor:pointer;color:var(--accent);}
+/* Animation for header and filters */
+.animate-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.animate-fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Show when active (toggled) */
+/* card animation */
+.card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.card.animate-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Hero --- */
+header{
+  text-align:center;
+  padding:20px 0 40px 0;
+}
+header h1{
+  font-size:48px;
+  color:var(--muted);
+  letter-spacing:1px;
+  margin-bottom:10px;
+}
+header p{
+  font-size:18px;
+  color:var(--muted);
+  opacity:0.8;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;  /* adds space on the right side */
+}
+
+.nav-left .logo img {
+  height:150px;       
+  width: auto;        
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  margin-right: 15px;   /* optional: extra gap between logo and next item */
+}
+
+
+/* --- Main Content Layout --- */
+.main-content{display:flex;gap:30px;align-items:flex-start;padding-bottom:60px; }
+.filters{
+  flex:0 0 280px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  position:sticky;
+  top:30px;
+  padding:20px;
+  background:var(--card-bg);
+    font-family: 'Playfair Display', serif; /* elegant, coffee feel */
+  box-shadow:0 8px 25px var(--shadow);
+}
+.filters input, .filters select{
+  padding:14px 18px;
+ color: #3c8070;
+  border:1px solid #ddd;
+  font-size:14px;
+  outline:none;
+  transition:0.3s;
+  background:var(--card-bg);
+  box-shadow:0 4px 12px var(--shadow);
+}
+.filters input:focus, .filters select:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 15px rgba(139,94,60,0.25);
+}
+
+/* --- Country Section --- */
+.country-section{margin-bottom:50px;}
+.country-header{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:20px;
+}
+.country-header img{width:40px;height:25px;object-fit:cover;}
+.country-header h2{font-size:22px;font-weight:600;color:var(--muted) ;}
+
+/* --- Grid Cards --- */
+.country-results{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr); /* 3 items per row */
+  gap:25px;
+}
+.price-per-kg {
+  display: flex;
+  align-items: center;
+  gap: 8px;              /* space between icon and text */
+  font-size: 15px;
+  font-weight: 600;
+  color: #2d2d2d;
+  margin-top: 12px;
+}
+
+.price-per-kg img {
+  width: 25px;           /* make icon small */
+  height: auto;
+}
+
+/* Reset */
+img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block; /* ✅ inline, not block */
+  vertical-align: middle;
+}
+
+/* Country flags */
+.country-header img {
+  width: 45px;
+  height: 28px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-right: 8px; /* spacing before text */
+}
+
+/* Card icons inline with text */
+.card-body .meta img {
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.card-body .meta img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.card{
+  background:var(--card-bg);
+  
+    border: 1px solid var(--muted);
+
+  transition:transform 0.3s,border 0.3s;
+  display:flex;
+  flex-direction:column;
+}
+.card:hover{
+  transform:translateY(-10px);
+  border: 1px solid var(--muted);
+}
+.card-body{
+  padding:22px;
+  display:flex;
+  flex-direction:column;
+}
+.card-body h3{font-size:20px;font-weight:700;color:var(--muted);}
+.card-body .meta{font-size:14px;color:var(--muted);margin:4px 0;}
+.card-body .notes{font-size:14px;font-style:italic;color:var(--muted);margin:10px 0;transition:0.3s;}
+.card-body .notes:hover{color:var(--muted);}
+.card-body .price-per-kg{font-weight:600;font-size:15px;margin-top:auto;color:var(--muted);;}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+}
+.footer-container, .footer-copy {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+/* Animation Active Class */
+.footer-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+.footer {
+  background-color: #3c8070; /* Deep green */
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+
+}
+
+.footer-container {
+  max-width: 1800px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; /* logo left - menu center - social right */
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.footer-logo img {
+  width: 200px;
+    animation: fadeInUp 1s forwards;
+  animation-delay: 0.5s;
+}
+
+/* Menu */
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  justify-content: center;
+  
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color: #c8a27d;
+  font-weight: 500;
+  font-size: 18px;
+  transition: color 0.3s;
+   animation: fadeInUp 1s forwards;
+  animation-delay: 0.5s;
+}
+
+.footer-links li a:hover {
+  color: #c8a27d;
+}
+
+/* Social Media */
+.footer-social {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-social li a {
+ color: #c8a27d;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #c8a27d;
+  border-radius: 50%;
+  transition: all 0.3s;
+   animation: fadeInUp 1s forwards;
+  animation-delay: 0.5s;
+}
+
+.footer-social li a:hover {
+  color: #b92b4f;
+  background-color: #c8a27d;
+}
+
+/* Copyright */
+.footer-copy {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #c8a27d;
+  text-align: center;
+}
+/* --- Responsive --- */
+
+  /* Tablet (768px and below) */
+@media(max-width: 1024px) {
+    html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+ .nav-center{
+  width: 100%;
+  align-items: center;
+  background-color: var(--card-bg);
+ }
+  .country-header img{
+    margin-left:20px;
+  }
+ .nav-right .mobile-menu {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--muted);
+  }
+
+ 
+ 
+ 
+
+  .nav-center.active {
+    right: 0;
+    width: 100%;
+    background-color: var(--bg);
+  }
+
+  /* Close icon inside menu */
+  .nav-center .close-menu {
+    display: block; /* will be toggled by JS */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--muted);
+    z-index: 1000;
+  }
+
+  .main-content {
+    flex-direction: column;
+    
+  }
+  .filters {
+    display: none;
+    flex: 1;
+    order: -1;
+    position: relative;
+    top: 0;
+    margin-bottom: 20px;
+  }
+  .country-results {
+    grid-template-columns: repeat(3, 1fr); /* 2 per row on tablet */
+    
+    padding: 20px;
+  }
+  .nav-center {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    flex-direction: column;
+    gap: 25px;
+    background: #fff;
+    height: 100vh;
+    width: 250px;
+    padding-top: 80px;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.1);
+    transition: 0.4s;
+    z-index: 998;
+  }
+  .nav-center.active {
+    right: 0;
+  }
+  .nav-right .mobile-menu {
+    display: block;
+  }
+  .nav-left .logo img {
+    height: 70px; /* smaller logo on tablet */
+  }
+}
+
+@media (max-width: 540px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Filters */
+  .filters {
+    display: none;
+    width: 0;
+    padding: 0;
+    margin: 0;
+  }
+ .nav-center{
+  width: 100%;
+  align-items: center;
+  background-color: var(--card-bg);
+ }
+  /* Mobile menu links spacing */
+  .nav-center a {
+    padding: 22px 0; /* slightly larger padding */
+    font-size: 17px;
+  }
+
+  /* Country cards 1 column */
+  .country-results {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablet */
+    gap: 18px;
+    padding: 12px;
+  }
+
+  /* Cards take full width */
+  .card {
+    width: 100%;
+  }
+
+  /* Stack main content vertically */
+  .main-content {
+    display: grid;
+    grid-template-columns: 2fr;
+    gap: 18px;
+  }
+
+  /* Hero text */
+  header h1 {
+    font-size: 28px;
+  }
+  header p {
+    font-size: 14px;
+  }
+
+  /* Country header adjustments */
+  .country-header {
+    padding: 8px;
+  }
+  .country-header h2 {
+    font-size: 20px;
+  }
+  .country-header img {
+    width: 42px;
+    height: 24px;
+  }
+
+  /* Card text */
+  .card-body h3 {
+    font-size: 18px;
+  }
+  .card-body .meta,
+  .card-body .notes,
+  .card-body .price-per-kg {
+    font-size: 13px;
+  }
+
+  /* Price icon */
+  .price-per-kg img {
+    width: 22px;
+    height: 16px;
+  }
+
+  /* Footer adjustments */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 22px;
+  }
+
+  .footer-logo {
+    order: 1;
+  }
+
+  .footer-links {
+    order: 2;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .footer-social {
+    order: 3;
+    justify-content: center;
+  }
+
+  .footer-copy {
+    order: 4;
+    margin-top: 12px;
+    font-size: 13px;
+  }
+}
+/* Mobile: iPhone 375px */
+/* Mobile: iPhone 375px */
+@media (max-width: 375px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Hide filters completely */
+  .filters {
+    display: none;
+    width: 0;
+    padding: 0;
+    margin: 0;
+  }
+ .nav-center{
+  width: 100%;
+  align-items: center;
+  background-color: var(--card-bg);
+ }
+  /* Mobile menu links spacing */
+  .nav-center a {
+    padding: 100px 0; /* smaller padding for mobile */
+    font-size: 16px;
+  }
+
+  /* Country cards 1 column */
+  .country-results {
+    grid-template-columns: 1fr; /* full-width cards */
+    gap: 15px;
+    padding: 10px;
+  }
+
+  /* Cards take full width */
+  .card {
+    width: 100%;
+  }
+
+  /* Stack main content vertically */
+  .main-content {
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: (1fr);
+    gap: 15px;
+  }
+
+  /* Hero text smaller */
+  header h1 {
+    font-size: 24px;
+  }
+  header p {
+    font-size: 13px;
+  }
+
+  /* Country header adjustments */
+  .country-header {
+    padding: 5px ; /* don’t use 100px, too big for mobile */
+   
+ }
+  .country-header h2 {
+    font-size: 18px;
+  }
+  .country-header img {
+    width: 35px;
+    height: 20px;
+  
+  }
+
+  /* Card text smaller */
+  .card-body h3 {
+    font-size: 16px;
+  }
+  .card-body .meta,
+  .card-body .notes,
+  .card-body .price-per-kg {
+    font-size: 12px;
+  }
+
+  /* Price icon smaller */
+  .price-per-kg img {
+    width: 20px;
+    height: 15px;
+  }
+
+   .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-logo {
+    order: 1;
+  }
+
+  .footer-links {
+    order: 2;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .footer-social {
+    order: 3;
+    justify-content: center;
+  }
+
+  .footer-copy {
+    order: 4;
+    margin-top: 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 414px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Hide filters completely */
+  .filters {
+    display: none;
+    width: 0;
+    padding: 0;
+    margin: 0;
+  }
+ .nav-center{
+  width: 100%;
+  align-items: center;
+  background-color: var(--card-bg);
+ }
+  /* Mobile menu links spacing */
+  .nav-center a {
+    padding: 20px 0; /* smaller padding for mobile */
+    font-size: 16px;
+  }
+
+  /* Country cards 1 column */
+  .country-results {
+    grid-template-columns: repeat(1, 1fr); /* full-width cards */
+    gap: 15px;
+    padding: 10px;
+  }
+
+  /* Cards take full width */
+  .card {
+    width: 100%;
+  }
+
+  /* Stack main content vertically */
+  .main-content {
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* Hero text smaller */
+  header h1 {
+    font-size: 24px;
+  }
+
+  header p {
+    font-size: 13px;
+  }
+
+  /* Country header adjustments */
+  .country-header {
+    padding: 5px; /* reduce padding for mobile */
+  }
+
+  .country-header h2 {
+    font-size: 18px;
+  }
+
+  .country-header img {
+    width: 35px;
+    height: 20px;
+  }
+
+  /* Card text smaller */
+  .card-body h3 {
+    font-size: 16px;
+  }
+
+  .card-body .meta,
+  .card-body .notes,
+  .card-body .price-per-kg {
+    font-size: 12px;
+  }
+
+  /* Price icon smaller */
+  .price-per-kg img {
+    width: 20px;
+    height: 15px;
+  }
+
+  /* Footer adjustments */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-logo {
+    order: 1;
+  }
+
+  .footer-links {
+    order: 2;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .footer-social {
+    order: 3;
+    justify-content: center;
+  }
+
+  .footer-copy {
+    order: 4;
+    margin-top: 10px;
+    font-size: 12px;
+  }
+}
+
+/* 430px breakpoint */
+
+@media (max-width: 430px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Hide filters completely */
+  .filters {
+    display: none;
+    width: 0;
+    padding: 0;
+    margin: 0;
+  }
+ .nav-center{
+  width: 100%;
+  align-items: center;
+  background-color: var(--card-bg);
+ }
+  /* Mobile menu links spacing */
+  .nav-center a {
+    padding: 22px 0; /* slightly larger padding for 430px */
+    font-size: 17px;
+  }
+
+  /* Country cards 1 column */
+  .country-results {
+     grid-template-columns: repeat(1, 1fr); 
+    gap: 18px;
+    padding: 12px;
+  }
+
+  /* Cards take full width */
+  .card {
+    width: 100%;
+  }
+
+  /* Stack main content vertically */
+  .main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  /* Hero text slightly larger */
+  header h1 {
+    font-size: 26px;
+  }
+  header p {
+    font-size: 14px;
+  }
+
+  /* Country header adjustments */
+  .country-header {
+    padding: 8px; /* slightly more padding */
+  }
+  .country-header h2 {
+    font-size: 19px;
+  }
+  .country-header img {
+    width: 40px;
+    height: 22px;
+  }
+
+  /* Card text slightly larger */
+  .card-body h3 {
+    font-size: 17px;
+  }
+  .card-body .meta,
+  .card-body .notes,
+  .card-body .price-per-kg {
+    font-size: 13px;
+  }
+
+  /* Price icon slightly larger */
+  .price-per-kg img {
+    width: 22px;
+    height: 16px;
+  }
+
+  /* Footer adjustments */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 22px;
+  }
+
+  .footer-logo {
+    order: 1;
+  }
+
+  .footer-links {
+    order: 2;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .footer-social {
+    order: 3;
+    justify-content: center;
+  }
+
+  .footer-copy {
+    order: 4;
+    margin-top: 12px;
+    font-size: 13px;
+  }
+}
+
+
+
+</style>
+
+</head>
+<body>
+   <div class="language-switch">
+  <a href="#" id="englishBtn">EN</a>
+  <a href="#" id="arabicBtn">AR</a>
+</div>
+<div class="container ">
+
+  <!-- Navbar -->
+  <nav class="navbar ">
+    <div class="nav-left">
+      <a href="#logo" class="logo"><img src="Green icon/full logo.png" alt=""></a>
+    </div>
+   <div class="nav-center">
+  <i class="ri-close-line close-menu"></i>
+   <a href="Menu.html">Menu</a>
+      <a href="AboutUsEnglishVersion.html">About us</a>
+      <a href="EnglishVersionHome.html#form">Contact us</a>
+            <a href="FaqQueastionEnglis.html">FAQ Questions</a>
+</div>
+
+<div class="nav-right">
+  <i class="ri-menu-line mobile-menu"></i>
+</div>
+</div>
+  </nav>
+
+  <!-- Hero -->
+  <header>
+    
+  </header>
+  <!-- Main Content -->
+  <div class="main-content ">
+    <aside class="filters animate-fade">
+      <input type="text" id="search" placeholder="Search by origin, notes, variety...">
+      <select id="process">
+        <option value="">All Processes</option>
+        <option value="Natural">Natural</option>
+        <option value="Washed">Washed</option>
+        <option value="Double Natural">Double Natural</option>
+        <option value="Anaerobic">Anaerobic</option>
+        <option value="Wine">Wine</option>
+        <option value="Natural Yeast">Natural Yeast</option>
+      </select>
+      
+      <select id="stock">
+        <option value="">All Stock</option>
+        <option value="In Stock">In Stock</option>
+        <option value="Coming Soon">Coming Soon</option>
+        <option value="Arriving">Arriving</option>
+        <option value="Sold Out">Sold Out</option>
+      </select>
+      <select id="pricePerKG">
+  <option value="">All Prices per Bag</option>
+  <option value="low">Below 2000 SAR/Bag</option>
+  <option value="mid">2000 - 3000 SAR/Bag</option>
+  <option value="high">Above 3000 SAR/Bag</option>
+</select>
+      <select id="sort">
+        <option value="">Sort by Price</option>
+        <option value="low-high">Price: Low → High</option>
+        <option value="high-low">Price: High → Low</option>
+      </select>
+    </aside>
+    <section id="results"></section>
+  </div>
+  
+</div>
+
+<footer class="footer" id="footer">
+  <div class="footer-container">
+    <!-- Logo Left -->
+    <div class="footer-logo">
+      <img src="Green icon/Logo Full White.png" alt="Koffe Green Logo">
+    </div>
+
+    <!-- Menu Center -->
+    <ul class="footer-links">
+     <ul class="footer-links scroll-in">
+      <li><a href="Menu.html">MENU</a></li>
+      <li><a href="Aboutus.html">ABOUT US</a></li>
+      <li><a href="SecondVersion.html">GET IN TOUCH</a></li>
+    </ul> 
+    </ul>
+
+    <!-- Social Media Right -->
+      <ul  class="footer-social ">
+        <li ><a href="https://www.instagram.com/koffeecherry?igsh=d3dvNXZ6YTNoYnd1" target="_blank"><i class="ri-instagram-line"></i></a></li>
+        <li>
+        <a href="https://maps.app.goo.gl/it639gcENH8TEokg9" target="_blank">
+            <i class="ri-map-pin-line"></i>
+        </a>
+    </li>
+
+    </ul>
+  </div>
+
+  <!-- Copyright full width -->
+</footer>
+
+
+<script >
+
+const coffees = [
+    { name:" Guji Uraga", variety:"74112 Serto ", score:87, process:"Natural", origin:"Ethiopia", altitude:"2000m", notes:"Dark Cocoa, Blueberry, Rueherb, Complex", price:2820, "price(SAR)/KG":47, stock:"In Stock" },
+  { name:"Guji Shakiso", variety:"74112 Serto ", score:86.5, process:"Natural", origin:"Ethiopia", altitude:"1950m", notes:"Clean, Fruity, Honey", price:2820, "price(SAR)/KG":47, stock:"In Stock" },
+  { name:"Guji Hambela", variety:"Gebrina ", score:87, process:"Natural", origin:"Ethiopia", altitude:"1980m", notes:"Peach, Tropical Fruit, Complex, Floral", price:2700, "price(SAR)/KG":47, stock:"In Stock" },
+  { name:"Guji Hambela", variety:"74518 ", score:86.75, process:"Natural Yeast", origin:"Ethiopia", altitude:"2100m", notes:"Intense Passion, Strawberry, Mango", price:3720, "price(SAR)/KG":62, stock:"Sold Out" },
+  { name:" Guji Hambela", variety:"Kurumie ", score:88, process:"Anaerobic", origin:"Ethiopia", altitude:"2050m", notes:"Intense Passion, Strawberry, Mango", price:3360, "price(SAR)/KG":56, stock:"Coming Soon" },
+  { name:"Guji Uraga", variety:"74518 ", score:87, process:"Anaerobic", origin:"Ethiopia", altitude:"2000m", notes:"Nuts, Creamy, Milk Chocolate", price:3300, "price(SAR)/KG":55, stock:"Coming Soon" },
+  { name:" Guji Hambela", variety:"Kurumie ", score:86, process:"Wine", origin:"Ethiopia", altitude:"1980m", notes:"Blackberry, Raspberry, Grape, Citrus", price:3240, "price(SAR)/KG":54, stock:"In Stock" },
+  { name:" Guji Uraga", variety:"Heirloom ", score:86, process:"Wine", origin:"Ethiopia", altitude:"2020m", notes:"Grape, Blackberry, Soft Red Wine", price:3240, "price(SAR)/KG":54, stock:"In Stock" },
+  { name:"Guji Hambela", variety:"Heirloom ", score:86.75, process:"Wine", origin:"Ethiopia", altitude:"2000m", notes:"Lavender, Jasmine, Bergamot", price:3300, "price(SAR)/KG":55, stock:"In Stock" },
+  { name:" Gesha Farm", variety:"Gesha ", score:89.75, process:"Anaerobic", origin:"Ethiopia", altitude:"2100m", notes:"Jasmine, Bright Acidity, Tropical Fruit", price:3840, "price(SAR)/KG":64, stock:"Coming Soon" },
+  { name:" Yirgacheffe Beloya", variety:"Heirloom ", score:89, process:"Natural Yeast", origin:"Ethiopia", altitude:"2000m", notes:"Strawberry, Mango, Peach, Tropical", price:3720, "price(SAR)/KG":62, stock:"In Stock" },
+  { name:" Yirgacheffe Adado", variety:"Kurumie ", score:89, process:"Natural", origin:"Ethiopia", altitude:"1980m", notes:"Jasmine, Coffee Blossom, Guava, Peach", price:2880, "price(SAR)/KG":48, stock:"In Stock" },
+  { name:"Guji Gelanabaya", variety:"Kurumie ", score:88.75, process:"Natural", origin:"Ethiopia", altitude:"1970m", notes:"Citrus, Floral, Lemongrass", price:2820, "price(SAR)/KG":47, stock:"In Stock" },
+  { name:"Yirgacheffe Beloya", variety:"Wellisho ", score:88.5, process:"Natural", origin:"Ethiopia", altitude:"1960m", notes:"Dark Chocolate, Nuts, Raisin, Lime", price:2820, "price(SAR)/KG":47, stock:"In Stock" },
+  { name:"Yirgacheffe Adado", variety:"74110 ", score:86, process:"Natural", origin:"Ethiopia", altitude:"1985m", notes:"Bright Acidity, Peach, Cranberry, Elderberry", price:2640, "price(SAR)/KG":44, stock:"Sold Out" },
+  { name:"Guji Hambela", variety:"Heirloom ", score:88, process:"Natural", origin:"Ethiopia", altitude:"1990m", notes:"Dark Cocoa, Flower, Coffee Blossom", price:2820, "price(SAR)/KG":47, stock:"In Stock" },
+  { name:" Yirgacheffe Beloya", variety:"Kurumie ", score:81.75, process:"Washed", origin:"Ethiopia", altitude:"1900m", notes:"Floral Aroma, Orange, Citrus, Bright, Balanced", price:1400, "price(SAR)/KG":28, stock:"Sold Out" },
+  { name:"Yirgacheffe Chilchel", variety:"Heirloom ", score:82, process:"Natural", origin:"Ethiopia", altitude:"1920m", notes:"Dark Chocolate, Creamy, Nuts, Fruit", price:1920, "price(SAR)/KG":32, stock:"Sold Out" }
+,
+  { name:"Mogiana", variety:"Catuai ", score:83, process:"Natural", origin:"Brazil", altitude:"900m", notes:"Peach, Dark Cocoa, Creamy, Nutty", price:2100, "price(SAR)/KG":35, stock:"In Stock" },
+  { name:"Huila San", variety:"Caturra ", score:84, process:"Washed", origin:"Colombia", altitude:"1600m", notes:"Lemon, Fruit Tea, Light Acidity", price:2660, "price(SAR)/KG":38, stock:"In Stock" },
+  { name:"Villa Rica", variety:"Castilo ", score:87, process:"Double Natural", origin:"Colombia", altitude:"1700m", notes:"Dark Chocolate, Berries, Red Apple", price:3150, "price(SAR)/KG":45, stock:"In Stock" },
+  { name:"Salvador San Carlos", variety:"Bourbon ", score:83, process:"Washed", origin:"El Salvador", altitude:"1400m", notes:"Sweet, Dark Chocolate, Nuts, Creamy", price:3312, "price(SAR)/KG":48, stock:"Arriving" },
+  ];
+
+const countryLogos = {
+    "Ethiopia": "https://upload.wikimedia.org/wikipedia/commons/7/71/Flag_of_Ethiopia.svg",
+  "Brazil": "https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg",
+  "Colombia": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg",
+  
+  "El Salvador": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAAA0CAMAAAAwlq9dAAABFFBMVEUAR6v///8ANKUAPagAP6iIm82TpNHi5vL///3i5vX/+un/8Lv/98//8LD/65L/99P/99f/6p3/77b//vX/88e1xN34+ff/7Ke6uqvr5db68tWAr3Zqfa7k5OK5u4PN0NRthaWYwJL/++Kz0LTB1rVwhcfQxZr91tPHwqKmtNWyx6DN4dLv+PKJqnqbqbprfrivusLz2MH8wLro1rWiq8V4jcCSnqCfvJT/5ngLjB6xp4TR48z53sD/6uqXkHQDQo4AiQDJzLVJoi0AlABhpFeFrpYeWaBMlT8/VJJMipIRk6QhjaYXjbxahaEpToE4lzxykjyCnqduh5dQkC3Jzd6JxIlLo1UAegB0sXBBZ4s7bnaq0aw08HSGAAABQklEQVRYhe3V61KCQBTA8T2lBQsCcomSlITKCi0zu5hdrCwLI8MiLN//PfJDD3CcWaam2d8MH89/GWAXQjiO47h/YSFDZBlPFMXZNccAATRBLiiqKgv4CXxcK+pUNagkU3QeHZfMWdNaATBsg3VcLYAGsLoGUAJqso0bGjjrZaFSAXejCgry3pFx0/M3t6ztWm1nN78XyBLLuKDXG/sHzcNW66h9fHJqKEzjZ34nZ513Ly7hyrruBTbug8G+0K5Dbm7vep3+vfswCXSmcSUYPD6FYTgcPkcvg7rENG6WRq9RHEdRPB6/9SnFTSHjVPIbVUtst9+txPF1jWkcit5H6jtueTJNE89GDmHj1C4Fo/TzK50EagG7/9FnC1X0adKMk6lkI5/4PKciyD+r4CfIUobIYoZ++xfOcRz3x+QyRPIZ+gZJIS6pfPh1EQAAAABJRU5ErkJggg=="
+};
+
+const resultsDiv = document.getElementById("results");
+const searchInput = document.getElementById("search");
+const processSelect = document.getElementById("process");
+const stockSelect = document.getElementById("stock");
+const pricePerKGSelect = document.getElementById("pricePerKG");
+const sortSelect = document.getElementById("sort");
+
+// Render function
+function renderByCountry(list){
+  resultsDiv.innerHTML = "";
+  if(list.length === 0){
+    resultsDiv.innerHTML = "<p style='text-align:center;color:#777;'>No results found.</p>";
+    return;
+  }
+
+  const countries = [...new Set(list.map(c => c.origin))];
+  countries.forEach(country => {
+    const countrySection = document.createElement("div");
+    countrySection.className = "country-section";
+
+    const header = document.createElement("div");
+    header.className = "country-header";
+    header.innerHTML = `<img src="${countryLogos[country] || ''}" alt="${country}"><h2>${country}</h2>`;
+    countrySection.appendChild(header);
+
+    const grid = document.createElement("div");
+    grid.className = "country-results";
+
+    list.filter(c => c.origin === country).forEach(c => {
+      const div = document.createElement("div");
+      div.className = "card";
+      div.innerHTML = `
+        <div class="card-body">
+          <h3>${c.name}</h3>
+          <p class="meta"><img src="logo pink/Logo one.png" alt=""> Variety: ${c.variety}</p>
+          <p class="meta"><img src="logo pink/logo 4.png" alt=""> Score: ${c.score}</p>
+          <p class="meta"><img src="logo pink/logo 8.png" alt=""> Process: ${c.process}</p>
+          <p class="meta"><img src="logo pink/logo 7.png" alt=""> Altitude: ${c.altitude}</p>
+          <p class="notes">${c.notes}</p>
+        </div>
+      `;
+      grid.appendChild(div);
+    });
+
+    countrySection.appendChild(grid);
+    resultsDiv.appendChild(countrySection);
+  });
+}
+
+// Filter + sort function
+function applyFilters() {
+  const term = searchInput.value.toLowerCase();
+  const process = processSelect.value;
+  const stock = stockSelect.value;
+  const priceFilter = pricePerKGSelect.value;
+  const sortValue = sortSelect.value;
+
+  let filtered = coffees.filter(c => {
+    if(term && !(c.name.toLowerCase().includes(term) ||
+                 c.notes.toLowerCase().includes(term) ||
+                 c.variety.toLowerCase().includes(term) ||
+                 c.origin.toLowerCase().includes(term))) return false;
+    if(process && c.process !== process) return false;
+    if(stock && c.stock !== stock) return false;
+
+    if(priceFilter === "low" && c.price >= 2000) return false;
+    if(priceFilter === "mid" && (c.price < 2000 || c.price > 3000)) return false;
+    if(priceFilter === "high" && c.price <= 3000) return false;
+
+    return true;
+  });
+
+  if(sortValue === "low-high") filtered.sort((a,b)=>a.price - b.price);
+  if(sortValue === "high-low") filtered.sort((a,b)=>b.price - a.price);
+
+  renderByCountry(filtered);
+}
+
+// Add event listeners
+[searchInput, processSelect, stockSelect, pricePerKGSelect, sortSelect].forEach(el => el.addEventListener("input", applyFilters));
+
+// Initial render
+renderByCountry(coffees);
+
+// Mobile menu toggle
+const menuIcon = document.querySelector('.mobile-menu');
+const closeIcon = document.querySelector('.close-menu');
+const navCenter = document.querySelector('.nav-center');
+
+function closeMenu() {
+  navCenter.classList.remove('active');
+  menuIcon.style.display = 'block';
+  closeIcon.style.display = 'none';
+}
+
+menuIcon.addEventListener('click', () => {
+  navCenter.classList.add('active');
+  menuIcon.style.display = 'none';
+  closeIcon.style.display = 'block';
+});
+
+closeIcon.addEventListener('click', closeMenu);
+
+// Reset menu when resizing to desktop
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 1024) {
+    closeMenu(); // remove active class
+    menuIcon.style.display = 'none'; // hide hamburger
+    closeIcon.style.display = 'none'; // hide close icon
+    navCenter.classList.remove('active'); // just in case
+  } else {
+    menuIcon.style.display = 'block'; // show hamburger on mobile
+  }
+});
+
+</script>
+<script src="cardAnimation.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

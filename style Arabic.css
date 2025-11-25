@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
+
+
+.language-switch {
+  position: fixed;
+  top: 15px;
+  left: 20px; /* align left by default */
+  z-index: 9999;
+  display: flex;
+  gap: 10px;
+  background: transparent;
+  padding: 15px 12px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  direction: ltr; /* keep flag order left to right */
+}
+
+.flag {
+  width: 25px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.flag:hover {
+  transform: scale(1.2);
+}
+.language-switch a{
+  text-decoration: none;
+  color: #3c8070;
+    cursor: pointer;
+  transition: transform 0.3s ease;
+}
+a:hover {
+  transform: scale(1.2);
+}
+/* ===================== Center on tablets and smaller devices ===================== */
+@media screen and (max-width: 1024px) {
+  .language-switch {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    top: 15px;
+    padding: 12px 10px;
+    gap: 8px;
+  }
+
+  .flag {
+    width: 23px;
+  }
+}
+
+/* Medium phones (540px) */
+@media screen and (max-width: 540px) {
+  .language-switch {
+    top: 12px;
+    padding: 10px 8px;
+    gap: 6px;
+  }
+
+  .flag {
+    width: 22px;
+  }
+}
+
+/* Small phones (414px and below) */
+@media screen and (max-width: 414px) {
+  .language-switch {
+    top: 10px;
+    padding: 8px;
+    gap: 5px;
+  }
+
+  .flag {
+    width: 20px;
+  }
+}

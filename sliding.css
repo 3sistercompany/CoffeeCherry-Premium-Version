@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://db.onlinewebfonts.com/c/f093e1b95226687573af124b98e34cb1?family=Atyp+TEST+Variable");
+
+:root {
+  --ui-bg: #151821;
+  --ui-fg: #fff;
+  --ui-accent: #4dabf7;
+  --ui-muted: #ddd;
+}
+
+h1, h2, h4 ,h3{
+  font-family: 'Atyp Test', sans-serif;
+     font-weight: 500;
+
+}
+@font-face {
+    font-family: 'Atyp Test';
+    src: url('atyp-font-family-1762680886-0/AtypTestVariable.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+ font-family: "Atyp TEST", sans-serif;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Neue Haas";
+  src: url("fonts/NeueHaas-Regular.woff2") format("woff2"),
+       url("fonts/NeueHaas-Regular.woff") format("woff"),
+       url("fonts/NeueHaas-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+/* Example for Regular and Bold weights */
+
+
+
+
+@font-face {
+  font-family: "Neue Haas";
+  src: url("fonts/NeueHaas-Regular.woff2") format("woff2"),
+       url("fonts/NeueHaas-Regular.woff") format("woff"),
+       url("fonts/NeueHaas-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neue Haas";
+  src: url("fonts/NeueHaas-Bold.woff2") format("woff2"),
+       url("fonts/NeueHaas-Bold.woff") format("woff"),
+       url("fonts/NeueHaas-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neue Haas";
+  src: url("fonts/NeueHaas-Italic.woff2") format("woff2"),
+       url("fonts/NeueHaas-Italic.woff") format("woff"),
+       url("fonts/NeueHaas-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Neue Haas";
+  src: url("fonts/NeueHaas-BoldItalic.woff2") format("woff2"),
+       url("fonts/NeueHaas-BoldItalic.woff") format("woff"),
+       url("fonts/NeueHaas-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+a {
+  font-family: "Neue Haas", sans-serif;
+  font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Atyp Test';
+    src: url('atyp-font-family-1762680886-0/AtypTestVariable.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* ===================== Banner Section ===================== */
+.bannerSection {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* removes gaps */
+}
+
+/* Image left, text right */
+.bannerSection.bannerLeft {
+  flex-direction: row;
+}
+
+/* ===================== Banner Slider ===================== */
+.bannerSlider {
+  position: relative;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Each image in slider */
+.bannerSlider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  animation: fadeSlide 9s infinite ease-in-out;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  display: block; /* removes extra whitespace */
+}
+
+/* Hover zoom effect */
+.bannerSlider img:hover {
+  transform: scale(1.05);
+}
+
+/* Stagger image slides */
+.bannerSlider img:nth-child(1) { animation-delay: 0s; }
+.bannerSlider img:nth-child(2) { animation-delay: 3s; }
+.bannerSlider img:nth-child(3) { animation-delay: 6s; }
+
+/* Fade animation */
+@keyframes fadeSlide {
+  0%, 20% { opacity: 0; }
+  25%, 45% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* ===================== Banner Text ===================== */
+.bannerText {
+  width: 50%;
+  padding: 40px 30px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.bannerText h4 {
+  font-size: 30px;
+  color: #222;
+  text-align: center;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-weight: 700;
+}
+
+.bannerText p {
+  font-size: 20px;
+  color: #444;
+  line-height: 1.6;
+  text-align: center;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  margin-bottom: 15px;
+}
+
+/* ===================== Unique HR ===================== */
+.hr-red {
+  position: relative;
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(90deg, #b92b4f, #ff6b81);
+  border: none;
+  border-radius: 2px;
+  margin: 0 auto 15px auto;
+  transition: all 0.4s ease;
+}
+
+.hr-red::before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  background-color: #b92b4f;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(185, 43, 79, 0.6);
+  transition: all 0.3s ease;
+}
+
+.hr-red:hover {
+  width: 100px;
+  background: linear-gradient(90deg, #ff6b81, #f8a1b0);
+}
+
+.hr-red:hover::before {
+  transform: translateY(-50%) scale(1.2);
+  box-shadow: 0 0 12px rgba(255, 107, 129, 0.8);
+}
+
+/* ===================== Responsive ===================== */
+
+/* ≤ 1024px */
+@media (max-width: 1024px) {
+    .bannerSection {
+    flex-direction: row !important; /* keep row layout */
+  }
+
+  .bannerSlider {
+    width: 50%;       /* same as original */
+    height: 100vh;    /* same as original */
+  }
+
+  .bannerText {
+    width: 50%;       /* same as original */
+    padding: 40px 30px; /* same as original */
+  }
+
+  .bannerText h4 {
+    font-size: 30px; 
+ font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-weight: 700;
+  }
+
+  .bannerText p {
+    font-size: 20px;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+  }
+}
+
+
+/* ≤ 820px */
+/* ≤ 820px - keep original layout */
+@media (max-width: 820px) {
+  .bannerSection {
+    flex-direction: row !important; /* keep row layout */
+  }
+
+  .bannerSlider,
+  .bannerText {
+    width: 50%; /* keep original */
+  }
+
+  .bannerSlider {
+    height: 100vh; /* keep original */
+  }
+
+  .bannerText {
+    padding: 40px 30px;
+  }
+
+  .bannerText h4 {
+font-family: "IBM Plex Sans Arabic", sans-serif;  font-weight: 700;
+  }
+
+  .bannerText p {
+    font-size: 20px;
+  }
+}
+
+
+/* ≤ 768px */
+@media (max-width: 768px) {
+  .bannerSection {
+    flex-direction: row !important; /* keep row layout */
+  }
+
+  .bannerSlider,
+  .bannerText {
+    width: 50%;
+  }
+
+  .bannerSlider {
+    height: 100vh;
+  }
+
+  .bannerText {
+    padding: 40px 30px;
+  }
+
+  .bannerText h4 {
+font-family: "IBM Plex Sans Arabic", sans-serif;  font-weight: 700;
+  }
+
+  .bannerText p {
+    font-size: 20px;
+  }
+}
+
+/* ≤ 414px */
+@media (max-width: 540px) {
+  .bannerSection {
+    flex-direction: column !important;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .bannerSlider {
+    width: 100%;
+    height: 300px;
+  }
+
+  .bannerSlider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .bannerText {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .bannerText h4 {
+    font-size: 15px;
+    
+  font-weight: 700;
+  }
+
+  .bannerText p {
+    font-size: 13px;
+  }
+
+  .hr-red {
+    width: 35px;
+    height: 3px;
+  }
+
+  .hr-red::before {
+    width: 10px;
+    height: 10px;
+    left: -8px;
+  }
+}
+/* ≤ 414px */
+@media (max-width: 414px) {
+  .bannerSection {
+    flex-direction: column !important;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .bannerSlider {
+    width: 100%;
+    height: 300px;
+  }
+
+  .bannerSlider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .bannerText {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .bannerText h4 {
+    font-size: 15px;
+     
+  font-weight: 700;
+  }
+
+  .bannerText p {
+    font-size: 13px;
+  }
+
+  .hr-red {
+    width: 35px;
+    height: 3px;
+  }
+
+  .hr-red::before {
+    width: 10px;
+    height: 10px;
+    left: -8px;
+  }
+}
+
+/* ≤ 375px */
+@media (max-width: 375px) {
+  .bannerSlider {
+    height: 270px;
+  }
+
+  .bannerText {
+    padding: 12px;
+  }
+
+  .bannerText h4 {
+    font-size: 14px;
+    
+  font-weight: 700;
+  }
+
+  .bannerText p {
+    font-size: 12px;
+  }
+
+  .hr-red {
+    width: 30px;
+    height: 3px;
+  }
+
+  .hr-red::before {
+    width: 8px;
+    height: 8px;
+    left: -6px;
+  }
+}
+
+/* 1025px - 1440px */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .bannerSlider { height: 420px; }
+  .bannerText { padding: 35px; }
+  .bannerText h4 { font-size: 19px;   
+  font-weight: 700;}
+  .bannerText p { font-size: 16px; }
+}

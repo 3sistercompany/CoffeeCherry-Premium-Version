@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css">
+   <link rel="stylesheet" href="SecondVersion copy.css">
+   <link rel="stylesheet" href="style Arabic.css">
+</head>
+ <style>
+    body {
+      font-family: "Tajawal", sans-serif;
+      direction: rtl;
+      text-align: right;
+    }
+    @font-face {
+  font-family: "LyonArabic Bold";
+  src: url("./fonts/LyonArabicDisplay-Bold-App.woff2") format("woff2");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "LyonArabic Regular";
+  src: url("./fonts/LyonArabicDisplay-Regular-App.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "LyonArabic Light";
+  src: url("./fonts/LyonArabicDisplay-Light-App.woff2") format("woff2");
+  font-weight: 300;
+}
+
+/* Body text */
+body {
+  font-family: "LyonArabic Regular", Tajawal, sans-serif; /* fallback: Tajawal */
+  direction: rtl;
+  text-align: right;
+}
+
+/* Headings */
+h1 {
+  font-family: "LyonArabic Bold", Tajawal, sans-serif;
+}
+
+h2 {
+  font-family: "LyonArabic Regular", Tajawal, sans-serif;
+}
+
+h3 {
+  font-family: "LyonArabic Light", Tajawal, sans-serif;
+}
+
+h4 {
+  font-family: "LyonArabic Regular", Tajawal, sans-serif;
+}
+
+/* Links */
+a {
+  font-family: "LyonArabic Regular", Tajawal, sans-serif;
+}
+.faq-header h1 {
+  font-family: "LyonArabic Bold", Tajawal, sans-serif;
+}
+
+.faq-header p {
+  font-family: "LyonArabic Regular", Tajawal, sans-serif;
+}
+
+
+  </style>
+<body>
+  <div class="language-switch">
+  <a href="#" id="englishBtn">EN</a>
+  <a href="#" id="arabicBtn">AR</a>
+</div>
+
+    <div class="container">
+  <nav class="navbar">
+    <div class="Logo">
+      <a href="#logo"><img src="Green icon/full logo.png" alt="الشعار"></a>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="Menu.html ">القائمة</a>
+      <a href="AboutUsArabicVersionSecond.html">من نحن</a>
+      <a href="SecondVersionArabic2.html#form">تواصل معنا</a>
+      <a href="QuestionCommon.html">الأسئلة الشائعة</a>
+    </div>
+
+    <div class="MenuOpen" id="menuToggle"><i class="ri-menu-line"></i></div>
+    <div class="CloseTag" id="menuClose"><i class="ri-close-line"></i></div>
+  </nav>
+</div>
+ <div class="min-h-screen flex items-center justify-center py-10 md:py-20 px-4 sm:px-6 lg:px-8">
+  <main class="max-w-4xl w-full bg-white rounded-3xl shadow-2xl p-6 sm:p-8 md:p-12">
+
+    <!-- Header -->
+    <header class=" faq-header text-center mb-10">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">الأسئلة الشائعة</h1>
+      <p class="faq-headermt-2 text-sm sm:text-base md:text-lg text-gray-600">
+        ابحث عن إجابات سريعة لأسئلتك أدناه.
+      </p>
+    </header>
+
+    <!-- FAQ Container -->
+    <div id="faq-container" class="space-y-4 text-sm sm:text-base md:text-base">
+
+      <!-- FAQ Item 1 -->
+      <div class="faq-item rounded-lg overflow-hidden shadow-md">
+        <button class="faq-question w-full flex justify-between items-center p-3 sm:p-4 md:p-6 text-left font-semibold text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200">
+          <span>ما أنواع القهوة التي نقدمها؟</span>
+          <span class="faq-icon-container flex items-center">
+            <svg class="plus-icon w-5 h-5 sm:w-6 sm:h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+            </svg>
+            <svg class="minus-icon w-5 h-5 sm:w-6 sm:h-6 text-gray-500 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 p-0 text-gray-600">
+          نوفر جميع أنواع القهوة الخضراء والمختصة.
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="faq-item rounded-lg overflow-hidden shadow-md">
+        <button class="faq-question w-full flex justify-between items-center p-3 sm:p-4 md:p-6 text-left font-semibold text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200">
+          <span>هل يمكنني طلب عينة؟</span>
+          <span class="faq-icon-container flex items-center">
+            <svg class="plus-icon w-5 h-5 sm:w-6 sm:h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+            </svg>
+            <svg class="minus-icon w-5 h-5 sm:w-6 sm:h-6 text-gray-500 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 p-0 text-gray-600">
+          بالتأكيد! يمكنك طلب عينة من أي نوع قهوة يعجبك.
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="faq-item rounded-lg overflow-hidden shadow-md">
+        <button class="faq-question w-full flex justify-between items-center p-3 sm:p-4 md:p-6 text-left font-semibold text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200">
+          <span>ما هي الكمية الأدنى للطلب؟</span>
+          <span class="faq-icon-container flex items-center">
+            <svg class="plus-icon w-5 h-5 sm:w-6 sm:h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+            </svg>
+            <svg class="minus-icon w-5 h-5 sm:w-6 sm:h-6 text-gray-500 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 p-0 text-gray-600">
+          الكمية الأدنى هي كيس واحد، يمكنك التحقق من وزنه ضمن تفاصيل المنتج.
+        </div>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div class="faq-item rounded-lg overflow-hidden shadow-md">
+        <button class="faq-question w-full flex justify-between items-center p-3 sm:p-4 md:p-6 text-left font-semibold text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200">
+          <span>هل نقدم خدمات الشحن الدولي؟</span>
+          <span class="faq-icon-container flex items-center">
+            <svg class="plus-icon w-5 h-5 sm:w-6 sm:h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+            </svg>
+            <svg class="minus-icon w-5 h-5 sm:w-6 sm:h-6 text-gray-500 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 p-0 text-gray-600">
+          نعم! رغم أن مركزنا في المملكة العربية السعودية، لكننا نقدم خدمات الشحن الدولي. تواصل مع فريق المبيعات للحصول على معلومات أكثر.
+        </div>
+      </div>
+
+      <!-- FAQ Item 5 -->
+      <div class="faq-item rounded-lg overflow-hidden shadow-md">
+        <button class="faq-question w-full flex justify-between items-center p-3 sm:p-4 md:p-6 text-left font-semibold text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200">
+          <span>كم يستغرق وصول طلبيتي؟</span>
+          <span class="faq-icon-container flex items-center">
+            <svg class="plus-icon w-5 h-5 sm:w-6 sm:h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+            </svg>
+            <svg class="minus-icon w-5 h-5 sm:w-6 sm:h-6 text-gray-500 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 p-0 text-gray-600">
+          داخل المملكة العربية السعودية، عادة تصل الشحنات خلال يومين. بالنسبة للشحن الدولي، يختلف وقت التسليم حسب الموقع، وسيتم إعلامك بالموعد المتوقع عند تثبيت الطلب.
+        </div>
+      </div>
+
+      <!-- FAQ Item 6 -->
+      <div class="faq-item rounded-lg overflow-hidden shadow-md">
+        <button class="faq-question w-full flex justify-between items-center p-3 sm:p-4 md:p-6 text-left font-semibold text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200">
+          <span>هل يمكنني استلام طلبيتي من المركز مباشرة؟</span>
+          <span class="faq-icon-container flex items-center">
+            <svg class="plus-icon w-5 h-5 sm:w-6 sm:h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+            </svg>
+            <svg class="minus-icon w-5 h-5 sm:w-6 sm:h-6 text-gray-500 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+            </svg>
+          </span>
+        </button>
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 p-0 text-gray-600">
+          نعم، يمكنك ذلك! الرجاء إعلامنا عند تثبيت الطلب لكي نجهزه للتسليم ضمن مستودعنا.
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+<!-- الفوتر -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo Left -->
+    <div class="footer-logo">
+      <img  src="Green icon/Logo Full White.png" alt="Koffe Green Logo">
+    </div>
+
+    <!-- Menu Center -->
+     <ul class="footer-links">
+     <ul class="footer-links">
+      <li class="scroll-in"><a href="Menu.html">القائمة</a></li>
+      <li class="scroll-in"><a href="AboutUsArabicVersionSecond.html">من نحن</a></li>
+      <li class="scroll-in"><a href="SecondVersionArabic2.html">تواصل معنا</a></li>
+    </ul> 
+    </ul>
+
+    <!-- Social Media Right -->
+    <ul  class="footer-social scroll-inOur">
+        <li><a href="https://www.instagram.com/koffeecherry?igsh=d3dvNXZ6YTNoYnd1" target="_blank"><i class="ri-instagram-line"></i></a></li>
+        <li>
+        <a href="https://maps.app.goo.gl/it639gcENH8TEokg9" target="_blank">
+            <i class="ri-map-pin-line"></i>
+        </a>
+    </li>
+
+    </ul>
+  </div>
+
+  <!-- Copyright full width -->
+</footer>
+
+<script src="SecondVersion.js">
+
+</script>
+<script src="FaqQuestionPage.js"></script>
+<script src="AnimationText.js"></script>
+<script src="Form.JS"></script>
+</body>
+</html>
