@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
         <script src="https://cdn.tailwindcss.com"></script>
-      
+      <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
+
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css">
    <link rel="stylesheet" href="SecondVersion copy.css">
    <link rel="stylesheet" href="style Arabic.css">
@@ -16,12 +17,68 @@
       direction: rtl;
       text-align: right;
     }
+    @font-face {
+  font-family: "LyonArabic Bold";
+  src: url("./fonts/LyonArabicDisplay-Bold-App.woff2") format("woff2");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "LyonArabic Regular";
+  src: url("./fonts/LyonArabicDisplay-Regular-App.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "LyonArabic Light";
+  src: url("./fonts/LyonArabicDisplay-Light-App.woff2") format("woff2");
+  font-weight: 300;
+}
+
+/* Body text */
+body {
+  font-family: "LyonArabic Regular", Tajawal, sans-serif; /* fallback: Tajawal */
+  direction: rtl;
+  text-align: right;
+}
+
+/* Headings */
+h1 {
+  font-family: "LyonArabic Bold", Tajawal, sans-serif;
+}
+
+h2 {
+  font-family: "LyonArabic Regular", Tajawal, sans-serif;
+}
+
+h3 {
+  font-family: "LyonArabic Light", Tajawal, sans-serif;
+}
+
+h4 {
+  font-family: "LyonArabic Regular", Tajawal, sans-serif;
+}
+
+/* Links */
+a {
+  font-family: "LyonArabic Regular", Tajawal, sans-serif;
+}
+.faq-header h1 {
+  font-family: "LyonArabic Bold", Tajawal, sans-serif;
+}
+
+.faq-header p {
+  font-family: "LyonArabic Regular", Tajawal, sans-serif;
+}
+
+
   </style>
 <body>
   <div class="language-switch">
-    <img src="https://flagcdn.com/w20/gb.png" alt="English" id="englishBtn" class="flag">
-    <img src="https://flagcdn.com/w20/sa.png" alt="Arabic" id="arabicBtn" class="flag">
-  </div>
+  <a href="#" id="englishBtn">EN</a>
+  <a href="#" id="arabicBtn">AR</a>
+</div>
+
     <div class="container">
   <nav class="navbar">
     <div class="Logo">
@@ -43,9 +100,9 @@
   <main class="max-w-4xl w-full bg-white rounded-3xl shadow-2xl p-6 sm:p-8 md:p-12">
 
     <!-- Header -->
-    <header class="text-center mb-10">
+    <header class=" faq-header text-center mb-10">
       <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">الأسئلة الشائعة</h1>
-      <p class="mt-2 text-sm sm:text-base md:text-lg text-gray-600">
+      <p class="faq-headermt-2 text-sm sm:text-base md:text-lg text-gray-600">
         ابحث عن إجابات سريعة لأسئلتك أدناه.
       </p>
     </header>
