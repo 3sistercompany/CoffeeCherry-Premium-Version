@@ -69,15 +69,41 @@
   font-weight: 700;
   font-style: italic;
 }
-a {
-  font-family: "Neue Haas", sans-serif;
+
+
+h1 {
+  font-family: "LyonArabic Bold";
+}
+
+h2 {
+  font-family: "LyonArabic Regular";
+}
+
+h3 {
+  font-family: "LyonArabic Light";
+}
+
+h4 {
+  font-family: "LyonArabic Regular";
+}
+@font-face {
+  font-family: "LyonArabic Bold";
+  src: url("./fonts/LyonArabicDisplay-Bold-App.woff2") format("woff2");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "LyonArabic Light";
+  src: url("./fonts/LyonArabicDisplay-Light-App.woff2") format("woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "LyonArabic Regular";
+  src: url("./fonts/LyonArabicDisplay-Regular-App.woff2") format("woff2");
   font-weight: 400;
 }
 
-h1, h2, h4 {
-  font-family: "Atyp TEST", sans-serif;
-  font-weight: 600;
-}
 @font-face {
   font-family: "Atyp TEST";
   src: url("../fonts/AtypTEST-Regular.woff2") format("woff2"),
@@ -159,7 +185,7 @@ h1, h2, h4 {
   line-height: 1.7;
   color: #222;
   text-align: right;
-    font-family: "Atyp TEST", sans-serif;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
   font-weight: 600;
 
 }
@@ -180,8 +206,7 @@ h1, h2, h4 {
 
   .bannerText h4 {
     font-size: 16px;
-      font-family: "Atyp TEST", sans-serif;
-  font-weight: 600;
+font-family: "IBM Plex Sans Arabic", sans-serif;  font-weight: 600;
 
   }
 }
@@ -225,7 +250,7 @@ h1, h2, h4 {
   .bannerText h4 {
     font-size: 15px;
     line-height: 1.5;
-        font-family: "Atyp TEST", sans-serif;
+     font-family: "IBM Plex Sans Arabic", sans-serif;
   font-weight: 600;
   }
 }
@@ -242,8 +267,7 @@ h1, h2, h4 {
 
   .bannerText h4 {
     font-size: 12px;
-        font-family: "Atyp TEST", sans-serif;
-  font-weight: 600;
+font-family: "IBM Plex Sans Arabic", sans-serif;  font-weight: 600;
   }
 
   .hr-red {
@@ -273,7 +297,7 @@ h1, h2, h4 {
   .bannerText h4 {
     font-size: 17px;
     text-align: right; /* or center if you prefer */
-        font-family: "Atyp TEST", sans-serif;
+   font-family: "IBM Plex Sans Arabic", sans-serif;
   font-weight: 600;
   }
 }
