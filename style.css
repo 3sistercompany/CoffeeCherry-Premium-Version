@@ -1,7 +1,7 @@
 .language-switch {
   position: fixed;
   top: 15px;
-  right: 20px;
+  right: 80px;
   z-index: 9999;
   display: flex;
   gap: 10px;
@@ -10,15 +10,22 @@
   border-radius: 10px;
   transition: all 0.3s ease;
 }
-
+a{
+   font-family: "IBM Plex Sans Arabic", sans-serif;
+}
 .flag {
   width: 25px;
   height: auto;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-
-.flag:hover {
+.language-switch a{
+  text-decoration: none;
+  color: #3c8070;
+    cursor: pointer;
+  transition: transform 0.3s ease;
+}
+a:hover {
   transform: scale(1.2);
 }
 
