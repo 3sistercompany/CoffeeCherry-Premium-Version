@@ -7,41 +7,58 @@
   --ui-accent: #4dabf7;
   --ui-muted: #ddd;
 }
-p {
-  
-     font-family: "Atyp TEST", sans-serif;
-  font-weight: 400;
-}
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
+
+
+
 a {
- font-family: "Atyp TEST", sans-serif;
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Neue Haas";
-  src: url("fonts/NeueHaas-Regular.woff2") format("woff2"),
-       url("fonts/NeueHaas-Regular.woff") format("woff"),
-       url("fonts/NeueHaas-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-weight: 300;
 }
 
+
+p{
+
+  font-family: "Avenir Regular", sans-serif;
+
+
+}
 @font-face {
-  font-family: "Atyp TEST";
-  src: url("fonts/AtypTEST-Bold.woff2") format("woff2"),
-       url("fonts/AtypTEST-Bold.woff") format("woff"),
-       url("fonts/AtypTEST-Bold.ttf") format("truetype");
+  font-family: "LyonArabic Bold";
+  src: url("./fonts/LyonArabicDisplay-Bold-App.woff2") format("woff2");
   font-weight: 700;
-  font-style: normal;
 }
 
 @font-face {
-  font-family: "Atyp TEST";
-  src: url("fonts/AtypTEST-Italic.woff2") format("woff2"),
-       url("fonts/AtypTEST-Italic.woff") format("woff"),
-       url("fonts/AtypTEST-Italic.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
+  font-family: "LyonArabic Light";
+  src: url("./fonts/LyonArabicDisplay-Light-App.woff2") format("woff2");
+  font-weight: 300;
 }
+
+@font-face {
+  font-family: "LyonArabic Regular";
+  src: url("./fonts/LyonArabicDisplay-Regular-App.woff2") format("woff2");
+  font-weight: 400;
+}
+
+
+h1 {
+  font-family: "LyonArabic Bold";
+}
+
+h2 {
+  font-family: "LyonArabic Regular";
+}
+
+h3 {
+  font-family: "LyonArabic Light";
+}
+
+h4 {
+  font-family: "LyonArabic Regular";
+}
+
 
 
 
@@ -50,58 +67,8 @@ a {
 
 
 
-@font-face {
-  font-family: "Neue Haas";
-  src: url("fonts/NeueHaas-Regular.woff2") format("woff2"),
-       url("fonts/NeueHaas-Regular.woff") format("woff"),
-       url("fonts/NeueHaas-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: "Neue Haas";
-  src: url("fonts/NeueHaas-Bold.woff2") format("woff2"),
-       url("fonts/NeueHaas-Bold.woff") format("woff"),
-       url("fonts/NeueHaas-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: "Neue Haas";
-  src: url("fonts/NeueHaas-Italic.woff2") format("woff2"),
-       url("fonts/NeueHaas-Italic.woff") format("woff"),
-       url("fonts/NeueHaas-Italic.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Neue Haas";
-  src: url("fonts/NeueHaas-BoldItalic.woff2") format("woff2"),
-       url("fonts/NeueHaas-BoldItalic.woff") format("woff"),
-       url("fonts/NeueHaas-BoldItalic.ttf") format("truetype");
-  font-weight: 700;
-  font-style: italic;
-}
-a {
-  font-family: "Neue Haas", sans-serif;
-  font-weight: 400;
-}
-
-h1, h2, h4 {
-  font-family: "Atyp TEST", sans-serif;
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Atyp TEST";
-  src: url("../fonts/AtypTEST-Regular.woff2") format("woff2"),
-       url("../fonts/AtypTEST-Regular.woff") format("woff"),
-       url("../fonts/AtypTEST-Regular.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
 
 
 /* ===================== Banner Section ===================== */
@@ -173,15 +140,14 @@ h1, h2, h4 {
 }
 
 .bannerText h4 {
+  font-family: "LyonArabic Regular";
   font-size: 30px;
   color: #222;
   text-align: center;
   line-height: 1.7;
   margin-bottom: 10px;
-  font-weight: 600;
-   font-family: "Atyp TEST", sans-serif;
-  font-weight: 700;
 }
+
 
 .bannerText p {
   font-size: 20px;
@@ -189,6 +155,7 @@ h1, h2, h4 {
   line-height: 1.6;
   text-align: center;
   margin-bottom: 15px;
+   font-family: "IBM Plex Sans Arabic", sans-serif;
 }
 
 /* ===================== Unique HR ===================== */
@@ -247,10 +214,12 @@ h1, h2, h4 {
 
   .bannerText h4 {
     font-size: 30px; 
+    font-family: "LyonArabic Regular";
   }
 
   .bannerText p {
     font-size: 20px;
+     font-family: "Avenir Regular", sans-serif;
   }
 }
 
@@ -277,10 +246,12 @@ h1, h2, h4 {
 
   .bannerText h4 {
     font-size: 30px;
+    font-family: "LyonArabic Regular";
   }
 
   .bannerText p {
     font-size: 20px;
+     font-family: "Avenir Regular", sans-serif;
   }
 }
 
@@ -306,10 +277,12 @@ h1, h2, h4 {
 
   .bannerText h4 {
     font-size: 30px;
+    font-family: "LyonArabic Regular";
   }
 
   .bannerText p {
     font-size: 20px;
+     font-family: "Avenir Regular", sans-serif;
   }
 }
 
@@ -342,12 +315,13 @@ h1, h2, h4 {
 
   .bannerText h4 {
     font-size: 15px;
-     font-family: "Atyp TEST", sans-serif;
-   font-weight: 700;
+  font-family: "LyonArabic Regular";
+   
   }
 
   .bannerText p {
     font-size: 13px;
+     font-family: "Avenir Regular", sans-serif;
   }
 
   .hr-red {
@@ -390,12 +364,12 @@ h1, h2, h4 {
 
   .bannerText h4 {
     font-size: 15px;
-     font-family: "Atyp TEST", sans-serif;
-   font-weight: 700;
+     font-family: "LyonArabic Regular";
   }
 
   .bannerText p {
     font-size: 13px;
+     font-family: "Avenir Regular", sans-serif;
   }
 
   .hr-red {
@@ -422,12 +396,12 @@ h1, h2, h4 {
 
   .bannerText h4 {
     font-size: 14px;
-     font-family: "Atyp TEST", sans-serif;
-  font-weight: 700;
+    font-family: "LyonArabic Regular";
   }
 
   .bannerText p {
     font-size: 12px;
+     font-family: "Avenir Regular", sans-serif;
   }
 
   .hr-red {
@@ -446,7 +420,6 @@ h1, h2, h4 {
 @media (min-width: 1025px) and (max-width: 1440px) {
   .bannerSlider { height: 420px; }
   .bannerText { padding: 35px; }
-  .bannerText h4 { font-size: 19px;  font-family: "Atyp TEST", sans-serif;
-  font-weight: 700; }
-  .bannerText p { font-size: 16px; }
+  .bannerText h4 { font-size: 19px;  font-family: "LyonArabic Regular";}
+  .bannerText p { font-size: 16px;  font-family: "Avenir Regular", sans-serif;}
 }
