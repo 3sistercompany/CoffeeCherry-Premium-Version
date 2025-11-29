@@ -88,10 +88,16 @@ a {
     font-style: normal;
 }
 
-
+body{
+  
+background: #fff8f0;
+}
 
 /* ===================== Banner Section ===================== */
 .bannerSection {
+  
+background: #fcf9e8;
+
   display: flex;
   width: 100%;
   flex-wrap: wrap;
@@ -116,6 +122,7 @@ a {
   flex-shrink: 0;
   margin: 0;
   padding: 0;
+
 }
 
 /* Each image in slider */
@@ -165,7 +172,7 @@ a {
   line-height: 1.7;
   margin-bottom: 10px;
   font-weight: 600;
-  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-family: "Neue Haas", sans-serif;
   font-weight: 700;
 }
 
@@ -174,8 +181,9 @@ a {
   color: #444;
   line-height: 1.6;
   text-align: center;
-  font-family: "IBM Plex Sans Arabic", sans-serif;
-  margin-bottom: 15px;
+font-family: "Neue Haas", sans-serif;
+  font-weight: 400; 
+   margin-bottom: 15px;
 }
 
 /* ===================== Unique HR ===================== */
@@ -234,13 +242,14 @@ a {
 
   .bannerText h4 {
     font-size: 30px; 
- font-family: "IBM Plex Sans Arabic", sans-serif;
+font-family: "Neue Haas", sans-serif;
   font-weight: 700;
   }
 
   .bannerText p {
     font-size: 20px;
-    font-family: "IBM Plex Sans Arabic", sans-serif;
+   font-family: "Neue Haas", sans-serif;
+  font-weight: 400;
   }
 }
 
@@ -266,11 +275,13 @@ a {
   }
 
   .bannerText h4 {
-font-family: "IBM Plex Sans Arabic", sans-serif;  font-weight: 700;
-  }
+font-family: "Neue Haas", sans-serif;
+  font-weight: 700;  }
 
   .bannerText p {
     font-size: 20px;
+    font-family: "Neue Haas", sans-serif;
+  font-weight: 400;
   }
 }
 
@@ -295,11 +306,13 @@ font-family: "IBM Plex Sans Arabic", sans-serif;  font-weight: 700;
   }
 
   .bannerText h4 {
-font-family: "IBM Plex Sans Arabic", sans-serif;  font-weight: 700;
+    font-family: "Neue Haas", sans-serif;font-weight: 700;
   }
 
   .bannerText p {
     font-size: 20px;
+    font-family: "Neue Haas", sans-serif;
+  font-weight: 400;
   }
 }
 
@@ -332,12 +345,14 @@ font-family: "IBM Plex Sans Arabic", sans-serif;  font-weight: 700;
 
   .bannerText h4 {
     font-size: 15px;
-    
+    font-family: "Neue Haas", sans-serif;
   font-weight: 700;
   }
 
   .bannerText p {
     font-size: 13px;
+    font-family: "Neue Haas", sans-serif;
+  font-weight: 400;
   }
 
   .hr-red {
@@ -380,12 +395,15 @@ font-family: "IBM Plex Sans Arabic", sans-serif;  font-weight: 700;
 
   .bannerText h4 {
     font-size: 15px;
-     
+     font-family: "Neue Haas", sans-serif;
+
   font-weight: 700;
   }
 
   .bannerText p {
     font-size: 13px;
+    font-family: "Neue Haas", sans-serif;
+  font-weight: 400;
   }
 
   .hr-red {
@@ -412,12 +430,15 @@ font-family: "IBM Plex Sans Arabic", sans-serif;  font-weight: 700;
 
   .bannerText h4 {
     font-size: 14px;
-    
+    font-family: "Neue Haas", sans-serif;
+
   font-weight: 700;
   }
 
   .bannerText p {
     font-size: 12px;
+    font-family: "Neue Haas", sans-serif;
+  font-weight: 400;
   }
 
   .hr-red {
