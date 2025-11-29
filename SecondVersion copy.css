@@ -1,16 +1,52 @@
+/* ========================= */
+/*       Google Fonts         */
+/* ========================= */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url("https://db.onlinewebfonts.com/c/f093e1b95226687573af124b98e34cb1?family=Atyp+TEST+Variable");
-
-
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
 
-
-:root {
-  --ui-bg: #151821;
-  --ui-fg: #fff;
-  --ui-accent: #4dabf7;
-  --ui-muted: #ddd;
+/* ========================= */
+/*      Lyon Arabic 2         */
+/* ========================= */
+/* Lyon Arabic 2 - all weights/styles */
+/* Lyon Arabic 2 - all weights/styles directly inside font-family */
+@font-face {
+  font-family: 'Lyon_Arabic_2';
+  src: url('./font-family/Lyon_Arabic_2-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: 'Lyon_Arabic_2';
+  src: url('./font-family/Lyon_Arabic_2-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lyon_Arabic_2';
+  src: url('./font-family/Lyon_Arabic_2-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Lyon_Arabic_2';
+  src: url('./font-family/Lyon_Arabic_2-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Apply the font */
+body {
+  font-family: 'Lyon_Arabic_2', serif;
+}
+
+/* Apply the font */
+
+/* ========================= */
+/*      Salma Arabic          */
+/* ========================= */
 @font-face {
   font-family: 'Salma Arabic';
   src: url('salma-font-family/Salma-Regular.woff2') format('woff2'),
@@ -19,63 +55,85 @@
   font-style: normal;
 }
 
-
 @font-face {
   font-family: 'Salma Arabic';
   src: url('salma-font-family/Salma-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
 }
+
+/* ========================= */
+/*      LyonArabic Display    */
+/* ========================= */
 @font-face {
-  font-family: "Avenir Regular";
-  src: url("./fonts/alfont_com_AlFont_com_Avenir-Regular.ttf") format("truetype");
+  font-family: 'LyonArabic Regular' ,sans-serif;
+  src: url('./fonts/LyonArabicDisplay-Regular-App.woff2') format('woff2');
   font-weight: 400;
-  font-style: normal;
-}
-
-p{
-
-  font-family: "Avenir Regular", sans-serif;
-
-
-}
-a{
-   font-family: "IBM Plex Sans Arabic", sans-serif;
-}
-@font-face {
-  font-family: "LyonArabic Bold";
-  src: url("./fonts/LyonArabicDisplay-Bold-App.woff2") format("woff2");
-  font-weight: 700;
 }
 
 @font-face {
-  font-family: "LyonArabic Light";
-  src: url("./fonts/LyonArabicDisplay-Light-App.woff2") format("woff2");
+  font-family: 'LyonArabic Light',sans-serif;
+  src: url('./fonts/LyonArabicDisplay-Light-App.woff2') format('woff2');
   font-weight: 300;
 }
 
 @font-face {
-  font-family: "LyonArabic Regular";
-  src: url("./fonts/LyonArabicDisplay-Regular-App.woff2") format("woff2");
-  font-weight: 400;
+  font-family: 'LyonArabic Bold', sans-serif;
+  src: url('./fonts/LyonArabicDisplay-Bold-App.woff2') format('woff2');
+  font-weight: 700;
 }
 
+/* ========================= */
+/*      Avenir Font           */
+/* ========================= */
+@font-face {
+  font-family: 'Avenir Regular', sans-serif;
+  src: url('./fonts/alfont_com_AlFont_com_Avenir-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 
+/* ========================= */
+/*      Root Variables        */
+/* ========================= */
+:root {
+  --ui-bg: #151821;
+  --ui-fg: #fff;
+  --ui-accent: #4dabf7;
+  --ui-muted: #ddd;
+}
+
+/* ========================= */
+/*      Body & General Text   */
+/* ========================= */
+
+/* Paragraphs */
+p {
+  font-family: 'Avenir Regular', sans-serif;
+}
+
+/* Links */
+a {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+/* Headings */
 h1 {
-  font-family: "LyonArabic Bold", sans-serif;
+  font-family: 'Avenir Regular', sans-serif;
+  font-weight: 700;
 }
 
 h2 {
-      font-family: "LyonArabic Regular", sans-serif;
-     font-weight: 500;
+  font-family: 'LyonArabic Regular', sans-serif;
+  font-weight: 500;
 }
 
 h3 {
-  font-family: "LyonArabic Light", sans-serif;
+  font-family: 'LyonArabic Light', sans-serif;
 }
 
 h4 {
-  font-family: "LyonArabic Regular", sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
 
@@ -95,7 +153,7 @@ h4 {
 .bannerContainer{
 
 
-background: #fff8f0; /* subtle light background */
+  background: #fcf9e8;/* subtle light background */
 }
 /* GENERAL RESET */
 * {
@@ -105,7 +163,9 @@ background: #fff8f0; /* subtle light background */
 
  
 }
-
+body{
+  background: #fcf9e8;
+}
 
 .video-container {
   position: relative;
@@ -151,8 +211,9 @@ video {
   text-align: center;
   color: #3b2f2f; /* Dark coffee brown */
   padding: 80px 20px; /* More space around */
-  font-family: "Salma Arabic", sans-serif;
-  background: #fff8f0; /* subtle light background */
+  
+  font-weight: 700;
+ background: #fcf9e8;; /* subtle light background */
   position: relative;
   overflow: hidden;
 }
@@ -169,11 +230,12 @@ video {
 /* Title */
 .contentHiglight h1 {
   font-size: 48px;
-  font-weight: 700;
+ font-family: 'LyonArabic Bold', sans-serif;
   margin-bottom: 15px;
   line-height: 1.2;
   letter-spacing: 1px;
- font-family: "LyonArabic Bold", sans-serif;
+ 
+  font-weight: 700;
 }
 
 /* Paragraph */
@@ -344,7 +406,7 @@ img.animate-img:hover {
   display: none;
 }
 .banner {
-   
+   background: #fcf9e8;
   padding: 60px 0;
 }
 
@@ -380,7 +442,7 @@ img.animate-img:hover {
   margin-bottom: 12px;
   color: #b92b4f;
   font-weight: 700;
- font-family: "LyonArabic Light", sans-serif;
+ font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
 .banner .card p {
@@ -422,7 +484,8 @@ background-color:  #3C8070
   margin-bottom: 10px;
   color: var(--ui-fg);
   font-weight: 400;
-   font-family: "LyonArabic Regular", sans-serif;
+   font-family: "LyonArabic bold", sans-serif;
+   font-weight: 500;
 }
 
 .BannerFile p {
@@ -439,9 +502,10 @@ background-color:  #3C8070
     
 }
  .BannerFile h3 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 10px;
-  font-family: "LyonArabic Light", sans-serif;
+     font-family: 'LyonArabic Bold', sans-serif;
+font-weight: 900;
   color: #ccc;
 }
 /* Form container */
@@ -508,9 +572,9 @@ background-color:  #3C8070
 
 /* Button hover effect */
 .BannerFileButton:hover {
-  background: #222;
+  
   transform: scale(1.05);
-  box-shadow: 0 6px 20px #222;
+
 }
 .BannerFileButton a{
   text-decoration: none;
@@ -1098,10 +1162,11 @@ padding-left: 100px;
   background: #fff8f0;
 }
 *{margin:0;padding:0;box-sizing:border-box; }
-body{background:#fff8f0;color:var(--text);}
+body{  background: #fcf9e8;color:var(--text);}
 .container{max-width:1400px;margin:0 auto;padding:40px 20px;}
 header{text-align:center;margin-bottom:40px;}
-header h1{font-size:38px;font-weight:700; font-family: "LyonArabic Bold", sans-serif; color:var(--accent);}
+header h1{font-size:38px;font-weight:700;   font-family: 'Lyon_Arabic_2', serif;
+ color:var(--accent);}
 header p{font-size:16px;color:var(--muted);margin-top:5px;}
 .main-content{display:flex;gap:30px;align-items:flex-start;}
 .filters{
@@ -1168,7 +1233,7 @@ banner .container .card.hidden:nth-child(1) { transition-delay: 0.2s; }
 .banner .container .card.hidden:nth-child(3) { transition-delay: 0.6s; }
 .card:hover{
   transform:translateY(-10px);
-  box-shadow:0 18px 30px rgba(0,0,0,0.15);
+  
 }
 
 
@@ -1468,6 +1533,7 @@ banner .container .card.hidden:nth-child(1) { transition-delay: 0.2s; }
 
 /* Image Right (Text Left) */
 .containerImageText {
+   background: #fcf9e8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1533,7 +1599,7 @@ banner .container .card.hidden:nth-child(1) { transition-delay: 0.2s; }
   font-size: 20px;
   line-height: 1.7;
   color: #222;
-  font-family: "LyonArabic Regular", sans-serif;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
   margin: 0;
 }
 .block .text1 h4 {
@@ -1611,13 +1677,14 @@ banner .container .card.hidden:nth-child(1) { transition-delay: 0.2s; }
 /* Heading */
 .textOverlay h1 {
   font-size: 3rem;
-  margin-bottom: 0px;
-  color: #ffd700;
+  margin-bottom: 5px;
+  color: #f5f5dc;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
   animation: slideDown 1s ease-out forwards;
-font-family: "LyonArabic Bold", sans-serif;}
+
+}
 
 /* Paragraph */
 .textOverlay p {
@@ -1644,21 +1711,24 @@ font-family: "LyonArabic Bold", sans-serif;}
 
 /* Responsive */
 @media (max-width: 1440px) {
-  .textOverlay h1 { font-family: "LyonArabic Bold", sans-serif;;  font-size: 2.8rem; }
+  .textOverlay h1 {   font-family: 'Lyon_Arabic_2', serif;
+  font-size: 2.8rem; }
   .textOverlay p { font-size: 1.15rem;  font-family: "Avenir Regular", sans-serif; }
 }
 
 /* Tablets landscape / smaller laptops */
 @media (max-width: 1024px) {
   .ContentCoverImage { height: 450px; }
-  .textOverlay h1 { font-family: "LyonArabic Bold", sans-serif;; font-size: 2.5rem; }
+  .textOverlay h1 {   font-family: 'Lyon_Arabic_2', serif;
+ font-size: 2.5rem; }
   .textOverlay p { font-size: 1.1rem;  font-family: "Avenir Regular", sans-serif; }
 }
 
 /* Tablets portrait */
 @media (max-width: 820px) {
   .ContentCoverImage { height: 400px; }
-  .textOverlay h1 { font-family: "LyonArabic Bold", sans-serif;; font-size: 2rem; }
+  .textOverlay h1 {   font-family: 'Lyon_Arabic_2', serif;
+font-size: 2rem; }
   .textOverlay p { font-size: 1rem;  font-family: "Avenir Regular", sans-serif; }
   
    .footer-links li a {
@@ -1673,15 +1743,17 @@ font-family: "LyonArabic Bold", sans-serif;}
 /* Small tablets / large phones */
 @media (max-width: 768px) {
   .ContentCoverImage { height:500px; }
-  .textOverlay h1 { font-family: "LyonArabic Bold"; font-size: 1.8rem; }
+  .textOverlay h1 {   font-family: 'Lyon_Arabic_2', serif;
+ font-size: 1.8rem; }
   .textOverlay p { font-size: 0.95rem; }
 }
 
 /* Small phones */
 @media (max-width: 420px) {
   .ContentCoverImage { height: 320px; }
-  .textOverlay h1 { font-family: "LyonArabic Bold"; font-size: 1.6rem; }
-  .textOverlay p { font-size: 0.9rem; padding: 20px 15px;  font-family: "Avenir Regular", sans-serif;}
+  .textOverlay h1 {   font-family: 'Lyon_Arabic_2', serif;
+ font-size: 1.6rem; }
+  .textOverlay p { font-size: 0.9rem;   font-family: "Avenir Regular", sans-serif;}
 }
 
 /* Extra small phones */
@@ -1699,7 +1771,8 @@ font-family: "LyonArabic Bold", sans-serif;}
   .textOverlay h1 { 
     font-size: 1.5rem; 
     line-height: 1.2; /* prevents heading from being cramped */
-    font-family: "LyonArabic Bold";
+      font-family: 'Lyon_Arabic_2', serif;
+
   }
   .textOverlay p { 
     font-size: 0.9rem; 
@@ -1836,7 +1909,7 @@ font-family: "LyonArabic Bold", sans-serif;}
 }
 .rightImage .textContainer1.hidden h4 {
   transform: translateX(50px);
-  font-family: "LyonArabic Regular", sans-serif;
+  font-family: "IBM Plex Sans Arabic", sans-serif; font-weight: 500;
 }
 
 .show.rightImage .imageContainer {
@@ -1844,7 +1917,7 @@ font-family: "LyonArabic Bold", sans-serif;}
 }
 .show.rightImage .textContainer1 h4 {
   transform: translateX(0);
-  font-family: "LyonArabic Regular", sans-serif;
+font-family: "IBM Plex Sans Arabic", sans-serif; font-weight: 500;
  
 }
 /* Staggered delays */
@@ -1863,14 +1936,15 @@ font-family: "LyonArabic Bold", sans-serif;}
 
 .rightImage .textContainer1 h4.hidden {
   transform: translateX(50px); /* slide right */
-  font-family: "LyonArabic Regular", sans-serif;
+font-family: "IBM Plex Sans Arabic", sans-serif; font-weight: 500;
 }
 .show.rightImage .imageContainer img {
   transform: translateX(0);
 }
 .show.rightImage .textContainer1 h4 {
   transform: translateX(0);
-     font-family: "LyonArabic Regular", sans-serif;
+font-family: "IBM Plex Sans Arabic", sans-serif;
+font-weight: 500;
 }
 .hr-red {
   border: none;
@@ -1907,7 +1981,8 @@ font-family: "Salma Arabic", sans-serif;
   font-size: 32px;
   margin-bottom: 40px;
   color: #333;
-  font-family: "LyonArabic Regular", sans-serif;
+  font-weight: 700;
+  font-family: "LyonArabic bold", sans-serif;
 }
 
 .stats-grid {
@@ -2145,7 +2220,8 @@ section {
 .containerHero h1 {
   font-size: 3rem;
   margin-bottom: 20px;
-  font-family: "LyonArabic Bold";
+   font-family: 'Lyon_Arabic_2', serif;
+
 }
 .containerHero p {
   font-size: 1.2rem;
@@ -2172,8 +2248,8 @@ section {
 
   .BannerFile h2 {
     font-size: 1.4rem;
-      font-family: "LyonArabic Regular", sans-serif;
-    font-weight: 400;
+      font-family: "LyonArabic bold", sans-serif;
+  font-weight: 700;
   }
 
   .BannerFile p {
@@ -2182,13 +2258,13 @@ section {
 
   .BannerFileButton {
     padding: 6px 10px;
-    margin-bottom: 50px;
+   
     font-size: 0.8rem;
   }
 
   .BannerFileButton:hover {
     transform: scale(1.03); /* تأثير أصغر قليلاً */
-    box-shadow: 0 5px 15px #222;
+ 
   }
   .imageContainer {
   margin-left: 20px;
@@ -2206,7 +2282,8 @@ section {
   }
   .contentHiglight h1 {
     font-size: 24px;
-    font-family: "IBM Plex Sans Arabic", sans-serif;
+      font-family: 'Lyon_Arabic_2', serif;
+
   }
   .contentHiglight p {
     font-size: 14px;
@@ -2232,7 +2309,8 @@ section {
   }
   .contentHiglight h1 {
     font-size: 32px;
-   font-family: "LyonArabic Bold";
+     font-family: 'Lyon_Arabic_2', serif;
+    font-family: 700;
   }
   .contentHiglight p {
     font-size: 18px;
@@ -2253,7 +2331,8 @@ section {
   #hero-1, #hero-2, #hero-3 {
     background-attachment: scroll; /* منع البارالاكس على الموبايل */
   }
-  .containerHero h1 { font-size: 2rem; font-family: "LyonArabic Bold";}
+  .containerHero h1 { font-size: 2rem;   font-family: 'Lyon_Arabic_2', serif;
+font-weight: 700; }
   .containerHero p { font-size: 1rem; }
 
 }
@@ -2437,7 +2516,8 @@ section {
   }
   .contentHiglight h1 {
     font-size: 40px;
-    font-family: "LyonArabic Bold";
+      font-family: 'Lyon_Arabic_2', serif;
+    font-weight: 700;
   }
   .contentHiglight p {
     font-size: 20px;
@@ -2545,7 +2625,7 @@ section {
   color: #222;
   margin: 0;
   text-align: right;
-      font-family: "LyonArabic Regular";
+      font-family: "LyonArabic Regular", sans-serif;
   
 }
 .footer .footer-logo img{
@@ -3063,7 +3143,8 @@ footer .footer-logo img{
   }
   .contentHiglight h1 {
     font-size: 36px;
-    font-family: "LyonArabic Bold";
+      font-family: 'Lyon_Arabic_2', serif;
+    font-weight: 700;
   }
   .contentHiglight p {
     font-size: 18px;
@@ -3267,6 +3348,7 @@ footer .footer-logo img{
 .Logo .LogoText{
  display: none;
 }
+
  /* Hide regular nav links */
    .nav-links {
     display: none;
@@ -3570,7 +3652,6 @@ margin-left: -10px;
     width: auto;
   }
 .overlay-content {
-  margin-top: -50px;
   justify-content: center;
   align-items: center;
 }
@@ -3795,7 +3876,8 @@ margin-left: -10px;
 
   .contentHiglight h1 {
     font-size: 28px;
-   font-family: "LyonArabic Bold";
+     font-family: 'Lyon_Arabic_2', serif;
+font-weight: 700;
   }
 
   .contentHiglight p {
@@ -3814,7 +3896,7 @@ margin-left: -10px;
     font-size: 34px;
     margin-bottom: 40px;
     color: #333;
-    font-family: "LyonArabic Regular", sans-serif;
+ font-family: "IBM Plex Sans Arabic", sans-serif;
   }
 
   .stats-grid {
@@ -3932,7 +4014,7 @@ margin-left: -10px;
   .banner .card h3 {
     font-size: 20px;
     margin-bottom: 10px;
-     font-family: "LyonArabic Light", sans-serif;
+     font-family: 'IBM Plex Sans Arabic', sans-serif;
   }
 
   .banner .card p {
@@ -4064,7 +4146,7 @@ margin-left: -10px;
   padding: 30px 25px;
  
   width: 100%;
-  background: rgba(0,0,0,0.3);
+  
   border-radius: 0px;
   backdrop-filter: blur(5px); /* يعطي تأثير Glassmorphism */
 }
@@ -4258,7 +4340,8 @@ margin-left: -10px;
 
   .contentHiglight h1 {
     font-size: 26px;
-    font-family: "LyonArabic Bold";
+      font-family: 'Lyon_Arabic_2', serif;
+font-weight: 700;
   }
 
   .contentHiglight p {
@@ -4342,7 +4425,7 @@ margin-left: -10px;
   .banner .card h3 {
     font-size: 18px;
     margin-bottom: 8px;
-     font-family: "LyonArabic Light", sans-serif;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
   }
 
   .banner .card p {
@@ -4365,7 +4448,7 @@ margin-left: -10px;
  .BannerFileButton {
     padding: 12px ;
     border: none;
-    margin-top: 10px;
+    margin-top: 0px;
     background: #fcf9e8;
     color: #e63c5c;
     border-radius: 6px;
@@ -4374,13 +4457,12 @@ margin-left: -10px;
     font-size: 1rem;
     text-transform: uppercase;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px #151821;
+  
   }
 
   .BannerFileButton:hover {
-    background: #222;
     transform: scale(1.05);
-    box-shadow: 0 6px 20px #222;
+ 
   }
 
   .BannerFileButton  a {
@@ -4399,7 +4481,15 @@ margin-left: -10px;
   .footer-logo img {
     width: 150px;
   }
-
+.BannerFile {
+    position: relative;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #3C8070;
+}
   .footer-links {
     justify-content: center;
     flex-wrap: wrap;
@@ -4429,6 +4519,22 @@ margin-left: -10px;
     background: #fcf9e8;
     z-index: 1000;
   }
+  .BannerFile {
+    position: relative;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #3C8070;
+}
+   .BannerFile h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+     font-family: 'LyonArabic Bold', sans-serif;
+font-weight: 900;
+  color: #ccc;
+}
 
   /* Highlight text block adjustments */
   .highlightBannerText1 {
@@ -4629,7 +4735,8 @@ margin-left: -10px;
 
   .contentHiglight h1 {
     font-size: 26px;
-    font-family: "LyonArabic Bold";
+      font-family: 'Lyon_Arabic_2', serif;
+font-weight: 700;
   }
 
   .contentHiglight p {
@@ -4777,7 +4884,7 @@ margin-left: -10px;
   .banner .card h3 {
     font-size: 22px;
     margin-bottom: 12px;
-      font-family: "LyonArabic Light", sans-serif;
+     font-family: 'IBM Plex Sans Arabic', sans-serif;
     color: #b92b4f;
     font-weight: 700;
   }
@@ -4922,7 +5029,7 @@ margin-left: -10px;
 .BannerFileButton {
   padding: 12px;
   border: none;
-  margin-top: 10px;
+  margin-top: 0px;
   background: #fcf9e8;
   color: #e63c5c;
   border-radius: 6px;
@@ -4931,13 +5038,13 @@ margin-left: -10px;
   font-size: 1rem;
   text-transform: uppercase;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px #151821;
+
 }
 
 .BannerFileButton:hover {
   background: #222;
   transform: scale(1.05);
-  box-shadow: 0 6px 20px #222;
+
 }
 
 .BannerFileButton a {
@@ -5088,13 +5195,13 @@ margin-left: -10px;
     font-size: 1rem;
     text-transform: uppercase;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px #151821;
+
   }
 
   .BannerFileButton:hover {
     background: #222;
     transform: scale(1.05);
-    box-shadow: 0 6px 20px #222;
+   
   }
 
   .BannerFileButton  a {
@@ -5118,7 +5225,7 @@ margin-left: -10px;
   }
   .banner .card h3 {
     font-size: 16px;
-     font-family: "LyonArabic Light", sans-serif;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
   }
   .banner .card p {
     font-size: 12px;
@@ -5138,7 +5245,8 @@ margin-left: -10px;
   /* Content highlight */
   .contentHiglight h1 {
     font-size: 22px;
-    font-family: "LyonArabic Bold";
+      font-family: 'Lyon_Arabic_2', serif;
+font-weight: 700;
   }
   .contentHiglight p {
     font-size: 12px;
@@ -5194,7 +5302,8 @@ margin-left: -10px;
   }
   .contentHiglight h1 {
     font-size: 26px;
-   font-family: "LyonArabic Bold";
+    font-family: 'Lyon_Arabic_2', serif;
+font-weight: 700;
   }
   .contentHiglight p {
     font-size: 14px;
@@ -5332,7 +5441,7 @@ margin-left: -10px;
   }
   .titleaboutus h4 {
     font-size: 20px;
-    font-family: "LyonArabic Regular";
+    font-family: "LyonArabic Regular", sans-serif;
   }
 
   .titleaboutus p {
@@ -5379,7 +5488,7 @@ margin-left: -10px;
   margin-bottom: 12px;
   color: #b92b4f;
   font-weight: 700;
-   font-family: "LyonArabic Light", sans-serif;
+ font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
 .banner .card p {
@@ -5422,7 +5531,7 @@ margin-left: -10px;
   .banner .card h3 {
     font-size: 18px; /* smaller heading */
     margin-bottom: 8px;
-     font-family: "LyonArabic Light", sans-serif;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
   }
 
   .banner .card p {
@@ -5451,7 +5560,7 @@ margin-left: -10px;
       .block .text1 h4 {
     font-size: 13px;
     line-height: 1.4;
-    font-family: "LyonArabic Regular";
+    font-family: "LyonArabic Regular", sans-serif;
   }
   .containerImageText {
     flex-direction: column; /* stack image and text vertically */
@@ -5497,7 +5606,7 @@ margin-left: -10px;
   .BannerFileButton:hover {
     background: #222;
     transform: scale(1.05);
-    box-shadow: 0 6px 20px #222;
+  
   }
 
   .BannerFileButton  a {
