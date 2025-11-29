@@ -12,7 +12,7 @@
 
 
 @font-face {
-    font-family: 'Atyp Test';
+  font-family: "Atyp TEST", sans-serif;
     src: url('atyp-font-family-1762680886-0/AtypTestVariable.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -48,8 +48,7 @@ a {
  font-family: 'Neue Haas Grotesk';  font-weight: 400;
 }
 p {
- font-family: 'Neue Haas Grotesk';  font-weight: 400;
-}
+font-family: "Neue Haas" sans-serif;  font-weight: 500;}
 h1, h2, h4 ,h3{
      font-family: 'Atyp Test', sans-serif;
      font-weight: 500;
@@ -335,7 +334,7 @@ img.animate-img:hover {
 
 .banner .card {
   text-align: center;
-   background: #fcf9e8;
+   background-color: #fcf9e8;
   padding: 30px 20px;
   border-radius: 0px;
   width: 260px;
@@ -362,7 +361,7 @@ img.animate-img:hover {
   font-size: 15px;
   color: #555;
   line-height: 1.5;
-   font-family: "Neue Haas";   font-weight: 400;
+   font-family: "Neue Haas" sans-serif;   font-weight: 400;
 }
 
 .banner .card:hover {
@@ -404,7 +403,8 @@ background-color:  #3C8070
   margin-bottom: 20px;
   line-height: 1.5;
     color: var(--ui-fg);
-     font-family: "Neue Haas";   font-weight: 400;
+   font-family: "Neue Haas", sans-serif;
+        font-weight: 500;
 }
  .BannerFile h3 {
   font-size: 1.5rem;
@@ -484,7 +484,7 @@ background-color:  #3C8070
 .BannerFileButton:hover {
   background: #222;
   transform: scale(1.05);
-  box-shadow: 0 6px 20px #222;
+ 
 }
 .BannerFileButton a{
   text-decoration: none;
@@ -1072,13 +1072,13 @@ padding-left: 100px;
   --shadow:rgba(0,0,0,0.1);
 }
 
-*{margin:0;padding:0;box-sizing:border-box;   font-family: "Atyp TEST"; font-weight:400}
+*{margin:0;padding:0;box-sizing:border-box;   font-family: "Atyp TEST", sans-serif; font-weight:400}
 body{ font-family: "Atyp TEST"; font-weight:400; background:var(--bg);color:var(--text);}
 .container{max-width:1400px;margin:0 auto;padding:40px 20px;}
 header{text-align:center;margin-bottom:40px;}
-header h1{font-size:38px;font-weight:700;color:var(--accent);  font-family: 'Atyp Test', sans-serif;;      font-family: "Atyp TEST", sans-serif;
+header h1{font-size:38px;font-weight:700;color:var(--accent);  font-family: "Atyp TEST", sans-serif;    
   font-weight: 500;}
-header p{font-size:16px;color:var(--muted);margin-top:5px;  font-family: "Neue Haas";   font-weight: 400;}
+header p{font-size:16px;color:var(--muted);margin-top:5px;  font-family: "Atyp TEST", sans-serif;   font-weight: 400;}
 .main-content{display:flex;gap:30px;align-items:flex-start;}
 .filters{
   flex:0 0 250px;
@@ -1538,7 +1538,7 @@ font-weight: 400;}
   height: 100vh;
   overflow: hidden;
   border-radius: 0; /* يمكنك تغييره إذا تحب الأطراف مدورة */
-  font-family: "Atyp TEST"; font-weight:400
+  font-family: "Atyp TEST", sans-serif; font-weight:400
   
 }
 
@@ -1595,8 +1595,8 @@ font-weight: 400;}
 /* Heading */
 .textOverlay h1 {
   font-size: 3rem;
-  margin-bottom: 20px;
-  color: #ffd700;
+  margin-bottom: 10px;
+  color: #f5f5dc;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
@@ -1880,7 +1880,7 @@ font-weight: 400;}
   .footerHome {
   background-color: #2e7d32; /* deep green */
   padding: 20px; /* only enough for content */
- font-family: "Atyp TEST"; font-weight:400;
+font-family: "Atyp TEST", sans-serif; font-weight:400;
   color: #fff;
   display: block; /* ensure block layout */
 }
@@ -1888,7 +1888,7 @@ font-weight: 400;}
    background: #fcf9e8;
   padding:0px;
   text-align: center;
- font-family: "Atyp TEST"; font-weight:400;
+font-family: "Atyp TEST", sans-serif;font-weight:400;
 }
 
 .statistics h2 {
@@ -1991,7 +1991,7 @@ font-weight: 400;}
   background-color: #3c8070; /* Deep green */
   padding: 40px;
   
- font-family: "Atyp TEST"; font-weight:400;
+font-family: "Atyp TEST", sans-serif; font-weight:400;
   color: #fff;
   width: 100%;
 
@@ -2194,13 +2194,13 @@ section {
     padding: 6px 10px;
     margin-bottom: 50px;
     font-size: 0.8rem;
-      font-family: "Neue Haas";
+   font-family: "Atyp TEST", sans-serif;
       font-weight: 500;
   }
 
   .BannerFileButton:hover {
     transform: scale(1.03); /* تأثير أصغر قليلاً */
-    box-shadow: 0 5px 15px #222;
+    
   }
   .imageContainer {
   margin-left: 20px;
@@ -2609,7 +2609,7 @@ font-family: 'Atyp Test', sans-serif;;
   }
   .footer .footer-links li a {
     font-size: 18px;
-       font-family: "Neue Haas", sans-serif;
+       font-family: "Atyp TEST", sans-serif;
   font-weight: 400;
   }
 
@@ -2630,132 +2630,7 @@ footer .footer-logo img{
         font-size: 0.9rem;
       }
 }
-@media (max-width: 820px) {
-  
-    .video-container {
-    height: 90vh; /* Slightly smaller height */
-  }
 
-  .left-image {
-    width: 120px;
-    bottom: 40px;
-    left: 25px;
-  }
- .BannerFile {
-    height: 160px;
-    padding: 35px 15px;
-  }
-
-  .BannerFile h2 {
-    font-size: 1.6rem;
-        font-family: 'Atyp Test', sans-serif;
-  }
-
-  .BannerFile p {
-    font-size: 0.9rem;
-  }
-
-  .BannerFileButton {
-    padding: 7px 12px;
-    font-size: 0.85rem;
-      font-family: "Neue Haas";
-      font-weight: 500;
-  }
-  .contentHiglight {
-    padding: 60px 15px;
-  }
-  .highlight-deco {
-    width: 50px;
-    height: 3px;
-  }
-  .contentHiglight h1 {
-    font-size: 36px;
-         font-family: 'Atyp Test', sans-serif;
-  }
-  .contentHiglight p {
-    font-size: 18px;
-  }
-  .textLeft,
-  .textright {
-    flex: 1 1 50%;       /* take half width */
-    font-size: 15px;     /* slightly smaller than desktop */
-    line-height: 1.6;
-    text-align: left;
-  }
-  /* Default alignment */
-  .highlightBannerText1{
-    width: 100%;
-  }
-.highlightBannerText1 .leftSide ,
-.highlightBannerText1 .rightSide {
-  text-align: left;
-}
-  .titleaboutus h4 {
-    font-size: 26px;
- font-family: 'Atyp Test', sans-serif;
-  }
-  .titleaboutus p {
-    font-size: 16px;
-    max-width: 600px;
-  
-  }
- .slidingg .content .title p {
-    font-size: 40px;
-   
-  }
-
- .slidingg .content .highlight p{
-      font-size: 25px;
-      margin-bottom: 20px;
-  }
- .slidingg .content .buttons button {
-      padding: 10px 25px;
-      font-size: 25px;
-  }
-
-  .faq-answer.open {
-        padding: 2rem 1rem; /* ≈ 32px */
-        font-size: 0.95rem;
-      }
-      .text h4
-  {
-    font-size: 16px;
-    line-height: 1.6;
-    text-align: left;
-font-family: 'Atyp Test', sans-serif;
-  }
-.footer-linksHome {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .footer-socialHome {
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .footer-logoHome img {
-    width: 100px;
-  }
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-
-
-  }
-  .footer-links {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
-  .imageTextSection {
-    display: flex;
-    flex-direction: column;
-  }
-  
-}
 @media (min-width: 600px) and (max-width: 1024px) {
     .scroll-in, .scroll-left, .scroll-right {
     transform: translateY(-20px);
@@ -2844,6 +2719,7 @@ font-family: 'Atyp Test', sans-serif;
   }
   .BannerFile {
     height: 180px;
+    
     padding: 40px 20px;
   }
 
@@ -2859,8 +2735,9 @@ font-family: 'Atyp Test', sans-serif;
   .BannerFileButton {
     padding: 8px 14px;
     font-size: 0.85rem;
-      font-family: "Neue Haas";
+      font-family: "Neue Haas", sans-serif;
       font-weight: 500;
+      margin-top: 0px;
   }
   .aboutusbackground {
     padding: 40px 20px;
@@ -3331,7 +3208,7 @@ footer .footer-logo img{
     width: 100%; /* full width */
     padding: 10px;
     font-size: 0.95rem;
-    font-family: "Atyp TEST"; font-weight: 400;
+ font-family: "Atyp TEST", sans-serif; font-weight: 400;
   }
 
   .subscribe-form textarea {
@@ -3376,7 +3253,7 @@ font-family: 'Atyp Test', sans-serif;}
         flex-direction: column;
         align-items: center;
         gap: 15px;
- font-family: "Atyp TEST"; font-weight:400;
+font-family: "Atyp TEST", sans-serif; font-weight:400;
     }
 
     .logoBannerFeatures img {
@@ -3544,7 +3421,133 @@ font-family: 'Atyp Test', sans-serif;}
 
 }
 
+@media (max-width: 820px) {
+  
+    .video-container {
+    height: 90vh; /* Slightly smaller height */
+  }
 
+  .left-image {
+    width: 120px;
+    bottom: 40px;
+    left: 25px;
+  }
+ .BannerFile {
+    height: 160px;
+    padding: 35px 15px;
+  }
+
+  .BannerFile h2 {
+    font-size: 1.6rem;
+        font-family: 'Atyp Test', sans-serif;
+  }
+
+  .BannerFile p {
+    font-size: 0.9rem;
+  }
+
+  .BannerFileButton {
+    padding: 7px 12px;
+    font-size: 0.85rem;
+     font-family: "Atyp TEST", sans-serif;
+      font-weight: 500;
+      margin-top: 25px;
+  }
+  .contentHiglight {
+    padding: 60px 15px;
+  }
+  .highlight-deco {
+    width: 50px;
+    height: 3px;
+  }
+  .contentHiglight h1 {
+    font-size: 36px;
+         font-family: 'Atyp Test', sans-serif;
+  }
+  .contentHiglight p {
+    font-size: 18px;
+  }
+  .textLeft,
+  .textright {
+    flex: 1 1 50%;       /* take half width */
+    font-size: 15px;     /* slightly smaller than desktop */
+    line-height: 1.6;
+    text-align: left;
+  }
+  /* Default alignment */
+  .highlightBannerText1{
+    width: 100%;
+  }
+.highlightBannerText1 .leftSide ,
+.highlightBannerText1 .rightSide {
+  text-align: left;
+}
+  .titleaboutus h4 {
+    font-size: 26px;
+ font-family: 'Atyp Test', sans-serif;
+  }
+  .titleaboutus p {
+    font-size: 16px;
+    max-width: 600px;
+  
+  }
+ .slidingg .content .title p {
+    font-size: 40px;
+   
+  }
+
+ .slidingg .content .highlight p{
+      font-size: 25px;
+      margin-bottom: 20px;
+  }
+ .slidingg .content .buttons button {
+      padding: 10px 25px;
+      font-size: 25px;
+  }
+
+  .faq-answer.open {
+        padding: 2rem 1rem; /* ≈ 32px */
+        font-size: 0.95rem;
+      }
+      .text h4
+  {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left;
+font-family: 'Atyp Test', sans-serif;
+  }
+.footer-linksHome {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .footer-socialHome {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .footer-logoHome img {
+    width: 100px;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .imageTextSection {
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
 
 
 
@@ -4040,6 +4043,7 @@ font-family: 'Atyp Test', sans-serif;}
 
   .BannerFile p {
     font-size: 0.75rem;
+        font-family: "Neue Haas", sans-serif;
   }
 
   .BannerFileButton {
@@ -4300,6 +4304,7 @@ font-family: 'Atyp Test', sans-serif;}
   .BannerFile p {
     font-size: 0.8rem;
     line-height: 1.5;
+        font-family: "Neue Haas", sans-serif;
   }
 
  .BannerFileButton {
@@ -4314,7 +4319,7 @@ font-family: 'Atyp Test', sans-serif;}
     font-size: 1rem;
     text-transform: uppercase;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px #151821;
+ 
   }
 
   .BannerFileButton:hover {
@@ -4357,6 +4362,12 @@ font-family: 'Atyp Test', sans-serif;}
   }
 }
     @media (max-width: 414px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
       .navbar {
     position: fixed;
     width: 100%;
@@ -4369,7 +4380,12 @@ font-family: 'Atyp Test', sans-serif;}
     background: #fcf9e8;
     z-index: 1000;
   }
-
+.BannerFile h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #ccc;
+    font-family: 'Atyp Test', sans-serif;
+}
   /* Highlight text block adjustments */
   .highlightBannerText1 {
     padding-bottom: 50px;
@@ -4392,6 +4408,7 @@ font-family: 'Atyp Test', sans-serif;}
 
   .BannerFile p {
     font-size: 0.75rem;
+        font-family: "Neue Haas", sans-serif;
   }
 
   .BannerFileButton {
@@ -4826,6 +4843,8 @@ font-family: 'Atyp Test', sans-serif;
   .BannerFile p {
     font-size: 0.8rem;
     line-height: 1.5;
+        font-family: "Neue Haas", sans-serif;
+        font-weight: 500;
   }
   .BannerFile .overlay-content{
      width: 100%;
@@ -4848,13 +4867,13 @@ font-family: 'Atyp Test', sans-serif;
     font-size: 1rem;
     text-transform: uppercase;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px #151821;
+   
   }
 
   .BannerFileButton:hover {
     background: #222;
     transform: scale(1.05);
-    box-shadow: 0 6px 20px #222;
+  
   }
 
   .BannerFileButton  a {
@@ -4890,14 +4909,14 @@ font-family: 'Atyp Test', sans-serif;
     font-size: 14px;
     margin-bottom: 4px;
     text-align: left;
-    font-family: "Atyp TEST"; font-weight: 500;
+   font-family: "Atyp TEST", sans-serif; font-weight: 500;
   }
 
   .input-icon input,
   .input-icon textarea {
     padding: 10px 10px 10px 36px;
     font-size: 13px;
-    font-family: "Atyp TEST"; font-weight: 500;
+  font-family: "Atyp TEST", sans-serif; font-weight: 500;
   }
 
   .input-icon i {
@@ -5008,13 +5027,12 @@ font-family: 'Atyp Test', sans-serif;
     font-size: 1rem;
     text-transform: uppercase;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px #151821;
+ 
   }
 
   .BannerFileButton:hover {
     background: #222;
     transform: scale(1.05);
-    box-shadow: 0 6px 20px #222;
   }
 
   .BannerFileButton  a {
@@ -5130,6 +5148,8 @@ font-family: 'Atyp Test', sans-serif;
 
   .BannerFile p {
     font-size: 0.7rem;
+        font-family: "Neue Haas", sans-serif;
+        font-weight: 500;
   }
 
 
@@ -5404,13 +5424,13 @@ font-family: 'Atyp Test', sans-serif;
     font-size: 1rem;
     text-transform: uppercase;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px #151821;
+   
   }
 
   .BannerFileButton:hover {
     background: #222;
     transform: scale(1.05);
-    box-shadow: 0 6px 20px #222;
+
   }
 
   .BannerFileButton  a {
@@ -5467,7 +5487,7 @@ font-family: 'Atyp Test', sans-serif;
     font-size: 14px;
     margin-bottom: 4px;
     text-align: left;
-    font-family: "Atyp TEST"; font-weight: 500;
+   font-family: "Atyp TEST", sans-serif;font-weight: 500;
   }
 
   /* Input/Icon adjustments */
@@ -5475,7 +5495,7 @@ font-family: 'Atyp Test', sans-serif;
   .input-icon textarea {
     padding: 10px 10px 10px 36px; /* reduce padding for smaller screens */
     font-size: 13px;
-    font-family: "Atyp TEST"; font-weight: 500;
+    font-family: "Atyp TEST", sans-serif; font-weight: 500;
   }
 
   .input-icon i {
@@ -5486,7 +5506,7 @@ font-family: 'Atyp Test', sans-serif;
   /* Textarea height */
   .input-icon textarea {
     min-height: 100px; /* smaller height for mobile */
-    font-family: "Atyp TEST"; font-weight: 500;
+  font-family: "Atyp TEST", sans-serif; font-weight: 500;
   }
 
   /* Submit button */
