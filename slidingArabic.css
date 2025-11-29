@@ -1,6 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url("https://db.onlinewebfonts.com/c/f093e1b95226687573af124b98e34cb1?family=Atyp+TEST+Variable");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
 
+/* ========================= */
+/*      Lyon Arabic 2         */
+/* ========================= */
+/* Lyon Arabic 2 - all weights/styles */
+/* Lyon Arabic 2 - all weights/styles directly inside font-family */
+@font-face {
+  font-family: 'Lyon_Arabic_2';
+  src: url('./font-family/Lyon_Arabic_2-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lyon_Arabic_2';
+  src: url('./font-family/Lyon_Arabic_2-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lyon_Arabic_2';
+  src: url('./font-family/Lyon_Arabic_2-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Lyon_Arabic_2';
+  src: url('./font-family/Lyon_Arabic_2-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Apply the font */
+body {
+  font-family: 'Lyon_Arabic_2', serif;
+}
+
+/* Apply the font */
+
+/* ========================= */
+/*      Salma Arabic          */
+/* ========================= */
+@font-face {
+  font-family: 'Salma Arabic';
+  src: url('salma-font-family/Salma-Regular.woff2') format('woff2'),
+       url('salma-font-family/Salma-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Salma Arabic';
+  src: url('salma-font-family/Salma-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ========================= */
+/*      LyonArabic Display    */
+/* ========================= */
+@font-face {
+  font-family: 'LyonArabic Regular';
+  src: url('./fonts/LyonArabicDisplay-Regular-App.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'LyonArabic Light';
+  src: url('./fonts/LyonArabicDisplay-Light-App.woff2') format('woff2');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'LyonArabic Bold';
+  src: url('./fonts/LyonArabicDisplay-Bold-App.woff2') format('woff2');
+  font-weight: 700;
+}
+
+/* ========================= */
+/*      Avenir Font           */
+/* ========================= */
+@font-face {
+  font-family: 'Avenir Regular';
+  src: url('./fonts/alfont_com_AlFont_com_Avenir-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ========================= */
+/*      Root Variables        */
+/* ========================= */
 :root {
   --ui-bg: #151821;
   --ui-fg: #fff;
@@ -8,59 +100,38 @@
   --ui-muted: #ddd;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
+/* ========================= */
+/*      Body & General Text   */
+/* ========================= */
 
+/* Paragraphs */
+p {
+  font-family: 'Avenir Regular', sans-serif;
+}
 
-
+/* Links */
 a {
-  font-family: "IBM Plex Sans Arabic", sans-serif;
-  font-weight: 300;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
-
-p{
-
-  font-family: "Avenir Regular", sans-serif;
-
-
-}
-@font-face {
-  font-family: "LyonArabic Bold";
-  src: url("./fonts/LyonArabicDisplay-Bold-App.woff2") format("woff2");
+/* Headings */
+h1 {
+  font-family: "LyonArabic Regular", sans-serif;
   font-weight: 700;
 }
 
-@font-face {
-  font-family: "LyonArabic Light";
-  src: url("./fonts/LyonArabicDisplay-Light-App.woff2") format("woff2");
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: "LyonArabic Regular";
-  src: url("./fonts/LyonArabicDisplay-Regular-App.woff2") format("woff2");
-  font-weight: 400;
-}
-
-
-h1 {
-  font-family: "LyonArabic Bold";
-}
-
 h2 {
-  font-family: "LyonArabic Regular";
+  font-family: 'LyonArabic Regular', sans-serif;
+  font-weight: 500;
 }
 
 h3 {
-  font-family: "LyonArabic Light";
+  font-family: 'LyonArabic Light', sans-serif;
 }
 
 h4 {
-  font-family: "LyonArabic Regular";
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
-
-
-
 
 /* Example for Regular and Bold weights */
 
@@ -79,6 +150,7 @@ h4 {
   align-items: center;
   justify-content: center;
   margin: 0;
+  background: #fcf9e8;
   padding: 0;
   overflow: hidden; /* removes gaps */
 }
@@ -140,7 +212,7 @@ h4 {
 }
 
 .bannerText h4 {
-  font-family: "LyonArabic Regular";
+
   font-size: 30px;
   color: #222;
   text-align: center;
@@ -214,12 +286,12 @@ h4 {
 
   .bannerText h4 {
     font-size: 30px; 
-    font-family: "LyonArabic Regular";
+    font-family: "LyonArabic Regular" , sans-serif;
   }
 
   .bannerText p {
     font-size: 20px;
-     font-family: "Avenir Regular", sans-serif;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
   }
 }
 
@@ -246,12 +318,12 @@ h4 {
 
   .bannerText h4 {
     font-size: 30px;
-    font-family: "LyonArabic Regular";
+   font-family: "LyonArabic Regular", sans-serif;
   }
 
   .bannerText p {
     font-size: 20px;
-     font-family: "Avenir Regular", sans-serif;
+     font-family: "IBM Plex Sans Arabic", sans-serif;
   }
 }
 
@@ -277,12 +349,12 @@ h4 {
 
   .bannerText h4 {
     font-size: 30px;
-    font-family: "LyonArabic Regular";
+    font-family: "LyonArabic Regular", sans-serif;
   }
 
   .bannerText p {
     font-size: 20px;
-     font-family: "Avenir Regular", sans-serif;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
   }
 }
 
@@ -315,13 +387,13 @@ h4 {
 
   .bannerText h4 {
     font-size: 15px;
-  font-family: "LyonArabic Regular";
+  font-family: "LyonArabic Regular", sans-serif;
    
   }
 
   .bannerText p {
     font-size: 13px;
-     font-family: "Avenir Regular", sans-serif;
+     font-family: "IBM Plex Sans Arabic", sans-serif;
   }
 
   .hr-red {
@@ -364,12 +436,12 @@ h4 {
 
   .bannerText h4 {
     font-size: 15px;
-     font-family: "LyonArabic Regular";
+    font-family: "LyonArabic Regular", sans-serif;
   }
 
   .bannerText p {
     font-size: 13px;
-     font-family: "Avenir Regular", sans-serif;
+     font-family: "IBM Plex Sans Arabic", sans-serif;
   }
 
   .hr-red {
@@ -396,12 +468,13 @@ h4 {
 
   .bannerText h4 {
     font-size: 14px;
-    font-family: "LyonArabic Regular";
+   font-family: "LyonArabic Regular", sans-serif;
+ 
   }
 
   .bannerText p {
     font-size: 12px;
-     font-family: "Avenir Regular", sans-serif;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
   }
 
   .hr-red {
@@ -420,6 +493,6 @@ h4 {
 @media (min-width: 1025px) and (max-width: 1440px) {
   .bannerSlider { height: 420px; }
   .bannerText { padding: 35px; }
-  .bannerText h4 { font-size: 19px;  font-family: "LyonArabic Regular";}
+  .bannerText h4 { font-size: 19px; font-family: "LyonArabic Regular", sans-serif;}
   .bannerText p { font-size: 16px;  font-family: "Avenir Regular", sans-serif;}
 }
